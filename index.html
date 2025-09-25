@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нові Кредити</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__top">
+            <div class="wrapper">
+                <div class="header__logo">
+                    <a href="/" aria-label="На главную">
+                        <img src="images/logo.svg" width="121" height="38" alt="Нові Кредити">
+                    </a>
+                </div>
+                <div class="header__controls">
+                    <div class="header__contacts">
+                        <a href="tel:+380800200001" class="header__phone">0 800 200 001</a>
+                        <button type="button" class="header__accessibility" aria-label="Версия для слабовидящих">
+                            <img src="images/eye.svg" width="16" height="13" alt="">
+                        </button>
+                        <div class="header__lang">
+                            <select name="language" id="language-select" class="header__lang-select">
+                                <option value="uk">UA</option>
+                                <option value="ru">RU</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="header__account">
+                        <a href="/contact" class="header__account-link">Зв'язок з нами</a>
+                        <span class="header__account-separator" role="separator"></span>
+                        <a href="/login" class="header__account-link">Вхід</a>
+                    </div>
+                </div>
+                <div class="header__mobile-menu">
+                    <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false"
+                        aria-controls="mobile-nav">
+                        <span class="header__burger-line"></span>
+                        <span class="header__burger-line"></span>
+                        <span class="header__burger-line"></span>
+                    </button>
+                </div>
+                <nav class="header__mobile-nav" id="mobile-nav" aria-hidden="true">
+                    <ul class="header__mobile-nav-list">
+                        <li class="header__mobile-nav-item">
+                            <a href="/" class="header__mobile-nav-link">Головна</a>
+                        </li>
+                        <li class="header__mobile-nav-item header__mobile-nav-item--dropdown">
+                            <a href="/payment" class="header__mobile-nav-link">
+                                Оплата кредиту
+                            </a>
+                            <ul class="header__mobile-nav-dropdown">
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/payment/online" class="header__mobile-nav-dropdown-link">Онлайн оплата</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/payment/bank" class="header__mobile-nav-dropdown-link">Через банк</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/payment/terminal" class="header__mobile-nav-dropdown-link">Через
+                                        термінал</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/payment/autopay" class="header__mobile-nav-dropdown-link">Автоплатіж</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/payment/schedule" class="header__mobile-nav-dropdown-link">Графік
+                                        платежів</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__mobile-nav-item">
+                            <a href="/faq" class="header__mobile-nav-link">Часті питання</a>
+                        </li>
+                        <li class="header__mobile-nav-item header__mobile-nav-item--dropdown">
+                            <a href="/about" class="header__mobile-nav-link">
+                                Про нас
+                            </a></a>
+                            <ul class="header__mobile-nav-dropdown">
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/about/company" class="header__mobile-nav-dropdown-link">Про компанію</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/about/history" class="header__mobile-nav-dropdown-link">Наша історія</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/about/team" class="header__mobile-nav-dropdown-link">Команда</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/about/news" class="header__mobile-nav-dropdown-link">Новини</a>
+                                </li>
+                                <li class="header__mobile-nav-dropdown-item">
+                                    <a href="/about/career" class="header__mobile-nav-dropdown-link">Кар'єра</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__mobile-nav-item">
+                            <a href="/how-to-get-credit" class="header__mobile-nav-link">Як отримати кредит?</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu-overlay" aria-hidden="true"></div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="wrapper">
+                <nav class="header__nav" aria-label="Основная навигация">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="/" class="header__nav-link">Головна</a>
+                        </li>
+                        <li class="header__nav-item header__nav-item--dropdown">
+                            <a href="/payment" class="header__nav-link">
+                                Оплата кредиту
+                            </a>
+                            <ul class="header__nav-dropdown">
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/payment/online" class="header__nav-dropdown-link">Онлайн оплата</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/payment/bank" class="header__nav-dropdown-link">Через банк</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/payment/terminal" class="header__nav-dropdown-link">Через термінал</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/payment/autopay" class="header__nav-dropdown-link">Автоплатіж</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/payment/schedule" class="header__nav-dropdown-link">Графік платежів</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="/faq" class="header__nav-link">Часті питання</a>
+                        </li>
+                        <li class="header__nav-item header__nav-item--dropdown">
+                            <a href="/about" class="header__nav-link">
+                                Про нас
+                            </a>
+                            <ul class="header__nav-dropdown">
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/about/company" class="header__nav-dropdown-link">Про компанію</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/about/history" class="header__nav-dropdown-link">Наша історія</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/about/team" class="header__nav-dropdown-link">Команда</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/about/news" class="header__nav-dropdown-link">Новини</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a href="/about/career" class="header__nav-dropdown-link">Кар'єра</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="/how-to-get-credit" class="header__nav-link">Як отримати кредит?</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrapper">
+                <div class="hero__banner">
+                    <div class="hero__banner-content">
+                        <div class="hero__banner-image">
+                            <picture>
+                                <source srcset="images/hero-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                                <source srcset="images/hero-desktop.png" media="(min-width: 1280px)">
+                                <source srcset="images/hero-mobile.webp" media="(max-width: 1279px)" type="image/webp">
+                                <img src="images/hero-mobile.png" width="361" height="918" alt="Hero banner image">
+                            </picture>
+                        </div>
+
+                        <div class="hero__title">
+                            <h1 class="hero__title-primary">Нові можливості</h1>
+                            <h2 class="hero__title-secondary">твоєї кредитної картки!</h2>
+                            <p class="hero__subtitle">Онлайн кредит на картку в Україні</p>
+                        </div>
+                    </div>
+
+                    <div class="hero__calculate">
+                        <div class="credit-box__content">
+                            <h2 class="credit-box__title">
+                                Отримайте гроші на картку прямо зараз
+                            </h2>
+                            <form class="credit-form">
+                                <div class="credit-form__field">
+                                    <label class="credit-form__label" for="creditAmountInput">
+                                        Сума кредиту:
+                                        <input type="text" value="5 000 грн" class="credit-form__amount"
+                                            id="creditAmountInput" />
+                                    </label>
+                                    <div class="credit-form__range-wrapper">
+                                        <input type="range" min="2000" max="20000" value="5000"
+                                            class="credit-form__range" id="creditAmount"
+                                            aria-labelledby="creditAmountInput" />
+                                        <div class="credit-form__range-labels">
+                                            <span class="credit-form__range-min">2 000 грн</span>
+                                            <span class="credit-form__range-max">20 000 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="credit-form__field--row">
+                                    <span class="credit-form__label">Термін:</span>
+                                    <div class="credit-form__term">
+                                        <strong>105 днів</strong>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="credit-form__submit btn button-red">
+                                    Почати оформлення
+                                    <img src="images/arrow.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </button>
+                            </form>
+
+                            <button type="button" class="credit-box__link">
+                                <img src="images/icon.svg" width="14" height="15" alt="" aria-hidden="true">
+                                Деталі кредиту
+                            </button>
+
+                            <div class="credit-box__warning">
+                                <p>
+                                    Даний блок не є кредитним калькулятором у розумінні Постанови НБУ від 05.10.2021
+                                    №100. Для ознайомлення з розрахунком кредитного калькулятора та інформації про
+                                    умови кредитування перейдіть за посиланням.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__cards">
+                    <article class="hero__card">
+                        <div class="hero__card-content">
+                            <h3 class="hero__card-title">Цілодобово, без вихідних</h3>
+                            <p class="hero__card-description">Приймаємо і обробляємо заявки на кредит цілодобово, без
+                                вихідних</p>
+                        </div>
+                        <div class="hero__card-image">
+                            <picture>
+                                <source srcset="images/cards1.webp" type="image/webp">
+                                <img src="images/cards1.png" width="155" height="125" loading="lazy"
+                                    alt="24/7 service illustration">
+                            </picture>
+                        </div>
+                    </article>
+
+                    <article class="hero__card">
+                        <div class="hero__card-content">
+                            <h3 class="hero__card-title">Bank ID</h3>
+                            <p class="hero__card-description">Швидка реєстрація за допомогою Bank ID від НБУ</p>
+                        </div>
+                        <div class="hero__card-image">
+                            <picture>
+                                <source srcset="images/cards2.webp" type="image/webp">
+                                <img src="images/cards2.png" width="155" height="125" loading="lazy"
+                                    alt="Bank ID registration">
+                            </picture>
+                        </div>
+                    </article>
+
+                    <article class="hero__card">
+                        <div class="hero__card-content">
+                            <h3 class="hero__card-title">Миттєво</h3>
+                            <p class="hero__card-description">Автоматична система схвалення заявок та миттєве
+                                зарахування коштів</p>
+                        </div>
+                        <div class="hero__card-image">
+                            <picture>
+                                <source srcset="images/cards3.webp" type="image/webp">
+                                <img src="images/cards3.png" width="155" height="125" loading="lazy"
+                                    alt="Instant approval system">
+                            </picture>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="get-credit">
+            <div class="wrapper">
+                <div class="get-credit__wrapper">
+                    <h2 class="get-credit__title heading-secondary ">Як отримати кредит від «Нові Кредити»?</h2>
+
+                    <div class="get-credit__container">
+                        <div class="get-credit__image">
+                            <picture>
+                                <source srcset="images/image.webp" type="image/webp">
+                                <img src="images/image.jpg" width="313" height="376" loading="lazy"
+                                    alt="Процес отримання кредиту">
+                            </picture>
+                        </div>
+
+                        <div class="get-credit__content">
+                            <div class="get-credit__steps">
+                                <h3 class="get-credit__steps-title">Виконайте декілька простих кроків:</h3>
+                                <ol class="get-credit__steps-list">
+                                    <li class="get-credit__step">
+                                        <div class="get-credit__step-icon">
+                                            <img src="images/step1.svg" width="20" height="21" alt="">
+                                        </div>
+                                        <h4 class="get-credit__step-title">Скористайтесь калькулятором</h4>
+                                    </li>
+
+                                    <li class="get-credit__step">
+                                        <div class="get-credit__step-icon">
+                                            <img src="images/step2.svg" width="16" height="21" alt="">
+                                        </div>
+                                        <h4 class="get-credit__step-title">Пройдіть реєстрацію на сайті</h4>
+                                    </li>
+
+                                    <li class="get-credit__step">
+                                        <div class="get-credit__step-icon">
+                                            <img src="images/step3.svg" width="16" height="21" alt="">
+                                        </div>
+                                        <h4 class="get-credit__step-title">Надішліть заявку</h4>
+                                    </li>
+
+                                    <li class="get-credit__step">
+                                        <div class="get-credit__step-icon">
+                                            <img src="images/step4.svg" width="16" height="21" alt="">
+                                        </div>
+                                        <h4 class="get-credit__step-title">Отримайте гроші</h4>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="get-credit__conditions">
+                                <h3 class="get-credit__conditions-title">Умови отримання:</h3>
+                                <ul class="get-credit__conditions-list">
+                                    <li class="get-credit__condition">
+                                        <div class="get-credit__condition-icon">
+                                            <img src="images/icons.svg" width="16" height="12" alt="">
+                                        </div>
+                                        <h4 class="get-credit__condition-title">Ви є громадянином України</h4>
+                                    </li>
+
+                                    <li class="get-credit__condition">
+                                        <div class="get-credit__condition-icon">
+                                            <img src="images/icons.svg" width="16" height="12" alt="">
+                                        </div>
+                                        <h4 class="get-credit__condition-title">Вже досягли 18 річного віку</h4>
+                                    </li>
+
+                                    <li class="get-credit__condition">
+                                        <div class="get-credit__condition-icon">
+                                            <img src="images/icons.svg" width="16" height="12" alt="">
+                                        </div>
+                                        <h4 class="get-credit__condition-title">Надаєте паспорт, ІПН, особистий телефон
+                                        </h4>
+                                    </li>
+
+                                    <li class="get-credit__condition">
+                                        <div class="get-credit__condition-icon">
+                                            <img src="images/icons.svg" width="16" height="12" alt="">
+                                        </div>
+                                        <h4 class="get-credit__condition-title">Маєте діючу банківську картку</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="get-credit__background">
+                    <picture>
+                        <source srcset="images/step-image.webp" type="image/webp">
+                        <img src="images/step-image.png" width="1816" height="819" loading="lazy"
+                            alt="Фонове зображення секції кроків">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="loan-application">
+            <div class="wrapper">
+                <div class="loan-application__content">
+                    <div class="loan-application__calc">
+                        <div class="credit-box__content">
+                            <h2 class="credit-box__title">
+                                Оформлення кредиту
+                            </h2>
+                            <form class="credit-form">
+                                <div class="credit-form__field">
+                                    <label class="credit-form__label" for="creditAmountInput">
+                                        Сума кредиту:
+                                        <input type="text" value="5 000 грн" class="credit-form__amount"
+                                            id="creditAmountInput" />
+                                    </label>
+                                    <div class="credit-form__range-wrapper">
+                                        <input type="range" min="2000" max="20000" value="5000"
+                                            class="credit-form__range" id="creditAmount"
+                                            aria-labelledby="creditAmountInput" />
+                                        <div class="credit-form__range-labels">
+                                            <span class="credit-form__range-min">2 000 грн</span>
+                                            <span class="credit-form__range-max">20 000 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="credit-form__field--row">
+                                    <span class="credit-form__label">Термін:</span>
+                                    <div class="credit-form__term">
+                                        <strong>105 днів</strong>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="credit-form__submit btn button-red">
+                                    Почати оформлення
+                                    <img src="images/arrow.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="loan-application__table">
+                            <h3 class="loan-application__table-title">Умови вашого договору:</h3>
+                            <dl class="loan-application__table-box">
+                                <div class="loan-application__table-row">
+                                    <dt>Сума кредиту:</dt>
+                                    <dd>2 000 грн</dd>
+                                </div>
+                                <div class="loan-application__table-row">
+                                    <dt>Загальні витрати за споживчим кредитом:</dt>
+                                    <dd>2 050 грн</dd>
+                                </div>
+                                <div class="loan-application__table-row">
+                                    <dt>Сума разової комісії за видачу кредиту:</dt>
+                                    <dd>50 грн</dd>
+                                </div>
+                                <div class="loan-application__table-row">
+                                    <dt>Термін кредиту:</dt>
+                                    <dd>105 днів</dd>
+                                </div>
+                                <div class="loan-application__table-row">
+                                    <dt>Вартість користування кредитом:</dt>
+                                    <dd>4 050 грн</dd>
+                                </div>
+                                <div class="loan-application__table-row">
+                                    <dt>Дата повернення кредиту:</dt>
+                                    <dd>28.10.2025</dd>
+                                </div>
+                                <div class="loan-application__table-row">
+                                    <dt>Реальна річна процентна ставка, відсотків річних (розрахунок здійснено за весь
+                                        строк кредитування 105 днів)</dt>
+                                    <dd>10 570,66%</dd>
+                                </div>
+                            </dl>
+                            <button type="button" class="credit-box__link">
+                                <img src="images/icon.svg" width="14" height="15" alt="" aria-hidden="true">
+                                Графік платежів
+                            </button>
+
+                            <div class="credit-box__warning">
+                                <p>
+                                    Даний блок не є кредитним калькулятором у розумінні Постанови НБУ від 05.10.2021
+                                    №100. З
+                                    актуальними розрахунками витрат на обрані Вами умови кредиту можете ознайомитись за
+                                    посиланням «Відображення результатів розрахунків калькулятора»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loan-application__info">
+                        <h3 class="loan-application__info-title">Кредитні продукти:</h3>
+                        <div class="loan-application__tabs">
+                            <button class="loan-application__tab active" data-tab="tab1" type="button">
+                                <img src="images/tab.svg" width="8" height="15" alt="" aria-hidden="true">
+                                Мікрокредит
+                            </button>
+                            <button class="loan-application__tab" data-tab="tab2" type="button">
+                                <img src="images/tab.svg" width="8" height="15" alt="" aria-hidden="true">
+                                Споживчий кредит
+                            </button>
+                        </div>
+
+                        <div id="tab1" class="loan-application__tab-content active">
+                            <ul class="loan-application__docs">
+                                <li class="loan-application__doc">
+                                    <a href="/" class="loan-application__doc-link">
+                                        <div class="loan-application__doc-img">
+                                            <img src="images/pdf.svg" width="20" height="21" alt="PDF">
+                                        </div>
+                                        <div class="loan-application__doc-info">
+                                            <strong class="loan-application__doc-title">Істотні характеристики</strong>
+                                            <span class="loan-application__doc-description">Інформація про істотні
+                                                характеристики послуги</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="loan-application__doc">
+                                    <a href="/" class="loan-application__doc-link">
+                                        <div class="loan-application__doc-img">
+                                            <img src="images/pdf.svg" width="20" height="21" alt="PDF">
+                                        </div>
+                                        <div class="loan-application__doc-info">
+                                            <strong class="loan-application__doc-title">Правила</strong>
+                                            <span class="loan-application__doc-description">Внутрішні правила про
+                                                надання коштів</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="loan-application__doc">
+                                    <a href="/" class="loan-application__doc-link">
+                                        <div class="loan-application__doc-img">
+                                            <img src="images/pdf.svg" width="20" height="21" alt="PDF">
+                                        </div>
+                                        <div class="loan-application__doc-info">
+                                            <strong class="loan-application__doc-title">Договір</strong>
+                                            <span class="loan-application__doc-description">ПРИМІРНИЙ ДОГОВІР ПРО
+                                                СПОЖИВЧИЙ КРЕДИТ</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="loan-application__accordion-box">
+                                <details class="loan-application__accordion" open>
+                                    <summary class="loan-application__accordion-button">Інформація для клієнтів:
+                                    </summary>
+                                    <div class="loan-application__accordion-content">
+                                        <p>«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                            мається на увазі що Позичальник раніше не користувався послугами
+                                            Кредитодавця і не мав з останнім договірних відносин в минулому Сума
+                                            (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                            мінімального розміру до максимального), строк користування нею (ним) (від
+                                            мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн.
+                                            строком 105 календарних днів Наявність, перелік і вартість супровідних
+                                            послуг фінансової установи, кредитних посередників та третіх осіб, уключаючи
+                                            розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                            становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9
+                                            768,48% до 10 570,66%</p>
+                                        <p>«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                            мається на увазі що Позичальник раніше не користувався послугами
+                                            Кредитодавця і не мав з останнім договірних відносин в минулому Сума
+                                            (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                            мінімального розміру до максимального), строк користування нею (ним) (від
+                                            мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн.
+                                            строком 105 календарних днів Наявність, перелік і вартість супровідних
+                                            послуг фінансової установи, кредитних посередників та третіх осіб, уключаючи
+                                            розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                            становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9
+                                            768,48% до 10 570,66%</p>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <div class="loan-application__accordion-box">
+                                <details class="loan-application__accordion">
+                                    <summary class="loan-application__accordion-button">Попередження:</summary>
+                                    <div class="loan-application__accordion-content">
+                                        <p>«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                            мається на увазі що Позичальник раніше не користувався послугами
+                                            Кредитодавця і не мав з останнім договірних відносин в минулому Сума
+                                            (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                            мінімального розміру до максимального), строк користування нею (ним) (від
+                                            мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн.
+                                            строком 105 календарних днів Наявність, перелік і вартість супровідних
+                                            послуг фінансової установи, кредитних посередників та третіх осіб, уключаючи
+                                            розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                            становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9
+                                            768,48% до 10 570,66%</p>
+                                        <p>«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                            мається на увазі що Позичальник раніше не користувався послугами
+                                            Кредитодавця і не мав з останнім договірних відносин в минулому Сума
+                                            (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                            мінімального розміру до максимального), строк користування нею (ним) (від
+                                            мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн.
+                                            строком 105 календарних днів Наявність, перелік і вартість супровідних
+                                            послуг фінансової установи, кредитних посередників та третіх осіб, уключаючи
+                                            розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                            становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9
+                                            768,48% до 10 570,66%</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                        <div id="tab2" class="loan-application__tab-content">
+                            <ul class="loan-application__docs">
+                                <li class="loan-application__doc">
+                                    <a href="/" class="loan-application__doc-link">
+                                        <img src="images/pdf.svg" width="20" height="21" alt="PDF">
+                                        <div class="loan-application__doc-info">
+                                            <strong class="loan-application__doc-title">Істотні характеристики</strong>
+                                            <span class="loan-application__doc-description">Інформація проістотні
+                                                характеристики послуги</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="loan-application__doc">
+                                    <a href="/" class="loan-application__doc-link">
+                                        <img src="images/pdf.svg" width="20" height="21" alt="PDF">
+                                        <div class="loan-application__doc-info">
+                                            <strong class="loan-application__doc-title">Правила</strong>
+                                            <span class="loan-application__doc-description">Внутрішні правила про
+                                                надання коштів</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="loan-application__doc">
+                                    <a href="/" class="loan-application__doc-link">
+                                        <img src="images/pdf.svg" width="20" height="21" alt="PDF">
+                                        <div class="loan-application__doc-info">
+                                            <strong class="loan-application__doc-title">Договір</strong>
+                                            <span class="loan-application__doc-description">ПРИМІРНИЙ ДОГОВІР ПРО
+                                                СПОЖИВЧИЙ КРЕДИТ</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="loan-application__accordion-box">
+                                <details class="loan-application__accordion">
+                                    <summary class="loan-application__accordion-button">Інформація для клієнтів:
+                                    </summary>
+                                    <div class="loan-application__accordion-content">
+                                        <p>«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                            мається на увазі що Позичальник раніше не користувався послугами
+                                            Кредитодавця і не мав з останнім договірних відносин в минулому Сума
+                                            (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                            мінімального розміру до максимального), строк користування нею (ним) (від
+                                            мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн.
+                                            строком 105 календарних днів Наявність, перелік і вартість супровідних
+                                            послуг фінансової установи, кредитних посередників та третіх осіб, уключаючи
+                                            розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                            становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9
+                                            768,48% до 10 570,66%</p>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <div class="loan-application__accordion-box">
+                                <details class="loan-application__accordion">
+                                    <summary class="loan-application__accordion-button">Попередження:</summary>
+                                    <div class="loan-application__accordion-content">
+                                        <p>«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                            мається на увазі що Позичальник раніше не користувався послугами
+                                            Кредитодавця і не мав з останнім договірних відносин в минулому Сума
+                                            (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                            мінімального розміру до максимального), строк користування нею (ним) (від
+                                            мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн.
+                                            строком 105 календарних днів Наявність, перелік і вартість супровідних
+                                            послуг фінансової установи, кредитних посередників та третіх осіб, уключаючи
+                                            розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                            становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9
+                                            768,48% до 10 570,66%</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loan-application__background">
+                    <picture>
+                        <source srcset="images/loan-application.webp" type="image/webp">
+                        <img src="images/loan-application.png" width="1816" height="1029" loading="lazy" alt="">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="wrapper">
+                <h2 class="heading-secondary">Чому кредит з «Нові Кредити» це просто</h2>
+                <div class="advantages__box">
+                    <div class="advantages__box-content">
+                        <div class="advantages__box-content-card">
+                            <div class="advantages__box-content-img">
+                                <picture>
+                                    <source srcset="images/card1.webp" type="image/webp">
+                                    <img src="images/card1.png" width="25" height="30" loading="lazy"
+                                        alt="Фонове зображення секції переваг">
+                                </picture>
+                                <span>Швидко</span>
+                            </div>
+                            <div class="advantages__box-content-text">
+                                <h3>Оформлення <br> рішення за 7 хвилин</h3>
+                                <p>Проста реєстрація та оперативне ухвалення рішення по вашій заявці. Кошти миттєво
+                                    зараховуються на вашу картку!</p>
+                            </div>
+                        </div>
+
+                        <div class="advantages__box-content-card">
+                            <div class="advantages__box-content-img">
+                                <picture>
+                                    <source srcset="images/card2.webp" type="image/webp">
+                                    <img src="images/card2.png" width="25" height="30" loading="lazy"
+                                        alt="Фонове зображення секції переваг">
+                                </picture>
+                                <span>Прозоро</span>
+                            </div>
+                            <div class="advantages__box-content-text">
+                                <h3>Прозорі умови <br> без прихованих деталей</h3>
+                                <p>Всі умови кредиту чітко зазначені та незмінні від початку до кінця.</p>
+                            </div>
+                        </div>
+
+                        <div class="advantages__box-content-card">
+                            <div class="advantages__box-content-img">
+                                <picture>
+                                    <source srcset="images/card3.webp" type="image/webp">
+                                    <img src="images/card3.png" width="25" height="30" loading="lazy"
+                                        alt="Фонове зображення секції переваг">
+                                </picture>
+                                <span>Прозоро</span>
+                            </div>
+                            <div class="advantages__box-content-text">
+                                <h3>Мінімум документів <br> для оформлення</h3>
+                                <p>Для оформлення кредиту достатньо лише вашого телефону, ІПН, паспорта та картки банку.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="advantages__box-content-card">
+                            <div class="advantages__box-content-img">
+                                <picture>
+                                    <source srcset="images/card4.webp" type="image/webp">
+                                    <img src="images/card4.png" width="25" height="30" loading="lazy"
+                                        alt="Фонове зображення секції переваг">
+                                </picture>
+                                <span>Безпечно</span>
+                            </div>
+                            <div class="advantages__box-content-text">
+                                <h3>Ваші дані під <br> надійним захистом</h3>
+                                <p>Ми гарантуємо безпеку ваших персональних даних, підтверджену сертифікатом PCI DSS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__box-image">
+                        <picture>
+                            <source srcset="images/advantages.webp" type="image/webp">
+                            <img src="images/advantages.png" width="576" height="576" loading="lazy"
+                                alt="Фонове зображення секції переваг">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pay">
+            <div class="wrapper">
+                <h2 class="pay-mobile__title">Як сплачувати кредит</h2>
+                <div class="pay__wrapper">
+                    <div class="pay__image">
+                        <picture>
+                            <source srcset="images/pay__image.webp" type="image/webp">
+                            <img src="images/pay__image.jpg" width="372" height="376" loading="lazy"
+                                alt="Зображення розділу способів оплати кредиту">
+                        </picture>
+                    </div>
+                    <div class="pay__content">
+                        <h2 class="pay__title">Як сплачувати кредит</h2>
+                        <div class="pay__cards">
+                            <article class="pay__card">
+                                <div class="pay__card-info">
+                                    <h3 class="pay__card-title">Через особистий кабінет «Нові Кредити»</h3>
+                                    <p class="pay__card-description">Ви можете сплатити кредит в особистому кабінеті
+                                        Нові Кредити банківською картою.</p>
+                                    <a href="/payment" class="pay__card-link btn button-red">Сплатити
+                                        <img src="images/arrow.svg" alt="" width="21" height="18" aria-hidden="true">
+                                    </a>
+                                </div>
+                                <div class="pay__card-image">
+                                    <picture>
+                                        <source srcset="images/pay-card1.webp" type="image/webp">
+                                        <img src="images/pay-card1.png" width="264" height="264" loading="lazy"
+                                            alt="Особистий кабінет для оплати кредиту">
+                                    </picture>
+                                </div>
+                            </article>
+
+                            <article class="pay__card">
+                                <div class="pay__card-info">
+                                    <h3 class="pay__card-title">В платіжних терміналах</h3>
+                                    <p class="pay__card-description">У терміналах самообслуговування City24 та EasyPay.
+                                        Зверніть увагу, що оплата можлива з урахуванням комісії.</p>
+                                    <div class="pay__card-buttons">
+                                        <a href="/payment/city24" class="pay__card-button btn button-black">City24</a>
+                                        <a href="/payment/easypay" class="pay__card-button btn button-black">EasyPay</a>
+                                    </div>
+                                </div>
+                                <div class="pay__card-image">
+                                    <picture>
+                                        <source srcset="images/pay-card2.webp" type="image/webp">
+                                        <img src="images/pay-card2.png" width="264" height="264" loading="lazy"
+                                            alt="Платіжні термінали City24 та EasyPay">
+                                    </picture>
+                                </div>
+                            </article>
+
+                            <article class="pay__card">
+                                <div class="pay__card-info">
+                                    <h3 class="pay__card-title">В інтернет-банкінгу</h3>
+                                    <p class="pay__card-description">Кредит можна сплатити в застосунку вашого
+                                        інтернет-банкінгу.</p>
+                                    <a href="/payment/banking" class="pay__card-link btn button-border">Реквізити
+                                        <img src="images/arrow-black.svg" alt="" width="21" height="18"
+                                            aria-hidden="true">
+                                    </a>
+                                </div>
+                                <div class="pay__card-image">
+                                    <picture>
+                                        <source srcset="images/pay-card3.webp" type="image/webp">
+                                        <img src="images/pay-card3.png" width="264" height="264" loading="lazy"
+                                            alt="Мобільний інтернет-банкінг">
+                                    </picture>
+                                </div>
+                            </article>
+
+                            <article class="pay__card">
+                                <div class="pay__card-info">
+                                    <h3 class="pay__card-title">У касах банків-партнерів</h3>
+                                    <p class="pay__card-description">Кредит можна сплатити у касах будь-яких українських
+                                        банків</p>
+                                    <a href="/payment/banks" class="pay__card-link btn button-border">Реквізити
+                                        <img src="images/arrow-black.svg" alt="" width="21" height="18"
+                                            aria-hidden="true">
+                                    </a>
+                                </div>
+                                <div class="pay__card-image">
+                                    <picture>
+                                        <source srcset="images/pay-card4.webp" type="image/webp">
+                                        <img src="images/pay-card4.png" width="264" height="264" loading="lazy"
+                                            alt="Каси банків-партнерів">
+                                    </picture>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pay__background">
+                <picture>
+                    <source srcset="images/pay.webp" type="image/webp">
+                    <img src="images/pay.jpg" width="1816" height="705" loading="lazy"
+                        alt="Декоративне фонове зображення">
+                </picture>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="wrapper">
+                <div class="reviews__header">
+                    <h2 class="heading-secondary">Відгуки клієнтів</h2>
+                    <a href="/reviews" class="reviews__all-link btn button-black">
+                        Дивитися всі
+                        <img src="images/google-icon.svg" width="20" height="21" alt="Google reviews icon">
+                    </a>
+                    <div class="reviews__navigation">
+                        <button class="reviews__nav-button reviews__nav-button--prev btn button-border" type="button"
+                            aria-label="Попередній відгук">
+                            <img src="images/prev.svg" width="18" height="15" alt="" aria-hidden="true">
+                        </button>
+                        <button class="reviews__nav-button reviews__nav-button--next btn button-border" type="button"
+                            aria-label="Наступний відгук">
+                            <img src="images/next.svg" width="18" height="15" alt="" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper reviews__slider" role="region" aria-label="Відгуки клієнтів">
+                    <div class="swiper-wrapper reviews__slider-wrapper">
+                        <article class="swiper-slide reviews__slide">
+                            <blockquote class="reviews__quote">
+                                <cite class="reviews__author">
+                                    Олександр Коноваленко
+                                </cite>
+                                <p class="reviews__text">
+                                    «Звернувся за кредитом на розвиток бізнесу — приємно здивувала швидкість ухвалення
+                                    рішення та прозорі умови. Усе чітко, без прихованих комісій, а менеджери були
+                                    уважними та професійними. Окремо хочу відзначити мобільний застосунок — інтуїтивно
+                                    зрозумілий інтерфейс, зручно відслідковувати графік платежів і залишок за кредитом.»
+                                </p>
+                            </blockquote>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <blockquote class="reviews__quote">
+                                <cite class="reviews__author">
+                                    Марія Петренко
+                                </cite>
+                                <p class="reviews__text">
+                                    «Звернувся за кредитом на розвиток бізнесу — приємно здивувала швидкість ухвалення
+                                    рішення та прозорі умови. Усе чітко, без прихованих комісій, а менеджери були
+                                    уважними та професійними. Окремо хочу відзначити мобільний застосунок — інтуїтивно
+                                    зрозумілий інтерфейс, зручно відслідковувати графік платежів і залишок за кредитом.»
+                                </p>
+                            </blockquote>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <blockquote class="reviews__quote">
+                                <cite class="reviews__author">
+                                    Андрій Іваненко
+                                </cite>
+                                <p class="reviews__text">
+                                    «Звернувся за кредитом на розвиток бізнесу — приємно здивувала швидкість ухвалення
+                                    рішення та прозорі умови. Усе чітко, без прихованих комісій, а менеджери були
+                                    уважними та професійними. Окремо хочу відзначити мобільний застосунок — інтуїтивно
+                                    зрозумілий інтерфейс, зручно відслідковувати графік платежів і залишок за кредитом.»
+                                </p>
+                            </blockquote>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <blockquote class="reviews__quote">
+                                <cite class="reviews__author">
+                                    Олександр Коноваленко
+                                </cite>
+                                <p class="reviews__text">
+                                    «Звернувся за кредитом на розвиток бізнесу — приємно здивувала швидкість ухвалення
+                                    рішення та прозорі умови. Усе чітко, без прихованих комісій, а менеджери були
+                                    уважними та професійними. Окремо хочу відзначити мобільний застосунок — інтуїтивно
+                                    зрозумілий інтерфейс, зручно відслідковувати графік платежів і залишок за кредитом.»
+                                </p>
+                            </blockquote>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <blockquote class="reviews__quote">
+                                <cite class="reviews__author">
+                                    Марія Петренко
+                                </cite>
+                                <p class="reviews__text">
+                                    «Звернувся за кредитом на розвиток бізнесу — приємно здивувала швидкість ухвалення
+                                    рішення та прозорі умови. Усе чітко, без прихованих комісій, а менеджери були
+                                    уважними та професійними. Окремо хочу відзначити мобільний застосунок — інтуїтивно
+                                    зрозумілий інтерфейс, зручно відслідковувати графік платежів і залишок за кредитом.»
+                                </p>
+                            </blockquote>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <blockquote class="reviews__quote">
+                                <cite class="reviews__author">
+                                    Андрій Іваненко
+                                </cite>
+                                <p class="reviews__text">
+                                    «Звернувся за кредитом на розвиток бізнесу — приємно здивувала швидкість ухвалення
+                                    рішення та прозорі умови. Усе чітко, без прихованих комісій, а менеджери були
+                                    уважними та професійними. Окремо хочу відзначити мобільний застосунок — інтуїтивно
+                                    зрозумілий інтерфейс, зручно відслідковувати графік платежів і залишок за кредитом.»
+                                </p>
+                            </blockquote>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="wrapper">
+                <h2 class="heading-secondary">Часті питання</h2>
+                <div class="faq__content">
+                    <div class="faq__accordion">
+                        <div class="faq__accordion-item">
+                            <button class="faq__accordion-header" type="button" aria-expanded="false">
+                                <span class="faq__accordion-title">Що таке мікрозайм і чим він відрізняється від
+                                    банківського кредиту?</span>
+                                <span class="faq__accordion-icon"><img src="images/select.svg" width="12" height="7"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__accordion-content">
+                                <div class="faq__accordion-body">
+                                    <p>Мікрозайм – це невеликий кредит, який зазвичай надається на короткий термін і без
+                                        складних вимог до позичальника. На відміну від традиційного банківського
+                                        кредиту, який може вимагати довготривалої перевірки кредитоспроможності та
+                                        надання великої кількості документів, мікрозайми часто оформлюються швидше і з
+                                        меншими формальностями.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq__accordion-item">
+                            <button class="faq__accordion-header" type="button" aria-expanded="false">
+                                <span class="faq__accordion-title">Хто може отримати мікрозайм у вашій компанії?</span>
+                                <span class="faq__accordion-icon"><img src="images/select.svg" width="12" height="7"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__accordion-content">
+                                <div class="faq__accordion-body">
+                                    <p>Мікрозайм – це невеликий кредит, який зазвичай надається на короткий термін і без
+                                        складних вимог до позичальника. На відміну від традиційного банківського
+                                        кредиту, який може вимагати довготривалої перевірки кредитоспроможності та
+                                        надання великої кількості документів, мікрозайми часто оформлюються швидше і з
+                                        меншими формальностями.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq__accordion-item">
+                            <button class="faq__accordion-header" type="button" aria-expanded="false">
+                                <span class="faq__accordion-title">На які цілі можна брати мікрозайм?</span>
+                                <span class="faq__accordion-icon"><img src="images/select.svg" width="12" height="7"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__accordion-content">
+                                <div class="faq__accordion-body">
+                                    <p>Мікрозайм – це невеликий кредит, який зазвичай надається на короткий термін і без
+                                        складних вимог до позичальника. На відміну від традиційного банківського
+                                        кредиту, який може вимагати довготривалої перевірки кредитоспроможності та
+                                        надання великої кількості документів, мікрозайми часто оформлюються швидше і з
+                                        меншими формальностями.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq__accordion-item">
+                            <button class="faq__accordion-header" type="button" aria-expanded="false">
+                                <span class="faq__accordion-title">Чи потрібна офіційна зайнятість або довідка про
+                                    доходи?</span>
+                                <span class="faq__accordion-icon"><img src="images/select.svg" width="12" height="7"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__accordion-content">
+                                <div class="faq__accordion-body">
+                                    <p>Мікрозайм – це невеликий кредит, який зазвичай надається на короткий термін і без
+                                        складних вимог до позичальника. На відміну від традиційного банківського
+                                        кредиту, який може вимагати довготривалої перевірки кредитоспроможності та
+                                        надання великої кількості документів, мікрозайми часто оформлюються швидше і з
+                                        меншими формальностями.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq__accordion-item">
+                            <button class="faq__accordion-header" type="button" aria-expanded="false">
+                                <span class="faq__accordion-title">Чи можна отримати позику з поганою кредитною
+                                    історією?</span>
+                                <span class="faq__accordion-icon"><img src="images/select.svg" width="12" height="7"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__accordion-content">
+                                <div class="faq__accordion-body">
+                                    <p>Мікрозайм – це невеликий кредит, який зазвичай надається на короткий термін і без
+                                        складних вимог до позичальника. На відміну від традиційного банківського
+                                        кредиту, який може вимагати довготривалої перевірки кредитоспроможності та
+                                        надання великої кількості документів, мікрозайми часто оформлюються швидше і з
+                                        меншими формальностями.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/" class="faq__more-link btn button-black">Інші питання
+                            <img src="images/arrow.svg" width="21" height="18" alt="">
+                        </a>
+                    </div>
+                    <div class="faq__image">
+                        <picture>
+                            <source srcset="images/faq-img.webp" type="image/webp">
+                            <img src="images/faq-img.png" width="576" height="576" loading="lazy"
+                                alt="FAQ illustration">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="faq__warning">
+                    <details class="faq__warning-details" open>
+                        <summary class="faq__warning-button">Попередження про наслідки користування кредитом</summary>
+                        <div class="faq__warning-content">
+                            <p>
+                                «Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на увазі
+                                що Позичальник раніше не користувався послугами Кредитодавця і не мав з останнім
+                                договірних відносин в минулому
+                                Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                мінімального розміру до максимального), строк користування нею (ним) (від мінімального
+                                значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком 105 календарних
+                                днів Наявність, перелік і вартість супровідних послуг фінансової установи, кредитних
+                                посередників та третіх осіб, уключаючи розмір платежу та базу його розрахунку Комісія за
+                                надання кредиту може становити від 100 до 150,00 грн. Реальна річна процентна ставка від
+                                9 768,48% до 10 570,66%
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq__categories">
+                    <div class="faq__category">
+                        <div class="faq__category-header">
+                            <img src="images/faq-icon1.png" width="25" height="30" alt="">
+                            <h3 class="faq__category-title">За сумою:</h3>
+                        </div>
+
+                        <div class="faq__category-tags">
+                            <span class="faq__tag btn button-white">Кредит до 20 тис грн</span>
+                            <span class="faq__tag btn button-white">Кредит на карту</span>
+                            <span class="faq__tag btn button-white">Кредит для студентів</span>
+                            <span class="faq__tag btn button-white">Кредит без довідки про доходи</span>
+                            <span class="faq__tag btn button-white">Безкоштовний перший кредит</span>
+                            <span class="faq__tag btn button-white">Кредит без відмов</span>
+                            <span class="faq__tag btn button-white">Позика на термін до 30 днів</span>
+                            <span class="faq__tag btn button-white">Швидкий кредит до 5000 грн</span>
+                            <span class="faq__tag btn button-white">Мікропозика онлайн</span>
+                        </div>
+                    </div>
+
+                    <div class="faq__category">
+                        <div class="faq__category-header">
+                            <img src="images/faq-icon2.png" width="25" height="30" alt="">
+                            <h3 class="faq__category-title">За географією:</h3>
+                        </div>
+
+                        <div class="faq__category-tags">
+                            <span class="faq__tag btn button-white">Кредити в Києві</span>
+                            <span class="faq__tag btn button-white">Кредит у Харкові</span>
+                            <span class="faq__tag btn button-white">Кредит у Львові</span>
+                            <span class="faq__tag btn button-white">Кредит у Дніпрі</span>
+                            <span class="faq__tag btn button-white">Кредити в Запоріжжі</span>
+                            <span class="faq__tag btn button-white">Позика в Черкасах</span>
+                            <span class="faq__tag btn button-white">Кредит в Рівному</span>
+                            <span class="faq__tag btn button-white">Кредит в Івано-Франківську</span>
+                            <span class="faq__tag btn button-white">Позика в Одесі</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="wrapper">
+                <div class="news__header">
+                    <h2 class="heading-secondary">Статті та новини</h2>
+                    <a href="/news" class="news__all-link btn button-black">
+                        Перейти до всіх новин
+                        <img src="images/arrow.svg" width="21" height="18" alt="" aria-hidden="true">
+                    </a>
+                    <div class="reviews__navigation">
+                        <button class="news__nav-button news__nav-button--prev btn button-border" type="button"
+                            aria-label="Попередній відгук">
+                            <img src="images/prev.svg" width="18" height="15" alt="" aria-hidden="true">
+                        </button>
+                        <button class="news__nav-button news__nav-button--next btn button-border" type="button"
+                            aria-label="Наступний відгук">
+                            <img src="images/next.svg" width="18" height="15" alt="" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="news__slider-box">
+                <button class="news__nav-button news__nav-button--prev btn button-border" type="button"
+                    aria-label="Попередній відгук">
+                    <img src="images/prev.svg" width="18" height="15" alt="" aria-hidden="true">
+                </button>
+                <div class="swiper news__slider" role="region" aria-label="Новини компанії">
+                    <div class="swiper-wrapper news__slider-wrapper">
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Оплата кредиту через термінали EasyPay</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Раді повідомити, що погашення кредиту стало ще простішим і
+                                    зручнішим
+                                    для вас!
+                                    Для вашої зручності наша компанія реалізувала проєкт автоматичного обміну даними з
+                                    провідною мережею платіжних терміналів самообслуговування EasyPay, яка налічує більш
+                                    ніж
+                                    19 500 активних терміналів по всій Україні.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Екоцид на на Каховській ГЕС</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Ми, як український бізнес, не можемо залишатися байдужими до
+                                    трагедії,
+                                    яка сталась в результаті злочинного теракту російської федерації на Каховській ГЕС.
+                                    Сьогодні ми беремо участь у спільній ініціативі з нашими надійними партнерами
+                                    волонтерської та гуманітарної допомоги, ГО “Волонтерська Допомога 4.5.0”, щодо
+                                    надання
+                                    матеріальної допомоги мешканцям Херсонщини, які постраждали внаслідок цієї
+                                    катастрофи.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Наша компанія спільно з ГО “Волонтерська Допомога 4.5.0”
+                                        підтримала проєкт “Піжами для поранених”</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Ми з гордістю анонсуємо, що наша компанія долучилась до
+                                    благодійного
+                                    проєкту “Піжами для поранених” у співпраці з громадською організацією “Волонтерська
+                                    Допомога 4.5.0”. Цей проєкт має на меті забезпечити поранених захисників, які
+                                    перебувають на лікуванні в одному з прифронтових госпіталів на Харківщині,
+                                    комплектами
+                                    піжам.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Оплата кредиту через термінали EasyPay</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Раді повідомити, що погашення кредиту стало ще простішим і
+                                    зручнішим
+                                    для вас!
+                                    Для вашої зручності наша компанія реалізувала проєкт автоматичного обміну даними з
+                                    провідною мережею платіжних терміналів самообслуговування EasyPay, яка налічує більш
+                                    ніж
+                                    19 500 активних терміналів по всій Україні.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Оплата кредиту через термінали EasyPay</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Раді повідомити, що погашення кредиту стало ще простішим і
+                                    зручнішим
+                                    для вас!
+                                    Для вашої зручності наша компанія реалізувала проєкт автоматичного обміну даними з
+                                    провідною мережею платіжних терміналів самообслуговування EasyPay, яка налічує більш
+                                    ніж
+                                    19 500 активних терміналів по всій Україні.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Екоцид на на Каховській ГЕС</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Ми, як український бізнес, не можемо залишатися байдужими до
+                                    трагедії,
+                                    яка сталась в результаті злочинного теракту російської федерації на Каховській ГЕС.
+                                    Сьогодні ми беремо участь у спільній ініціативі з нашими надійними партнерами
+                                    волонтерської та гуманітарної допомоги, ГО “Волонтерська Допомога 4.5.0”, щодо
+                                    надання
+                                    матеріальної допомоги мешканцям Херсонщини, які постраждали внаслідок цієї
+                                    катастрофи.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Наша компанія спільно з ГО “Волонтерська Допомога 4.5.0”
+                                        підтримала проєкт “Піжами для поранених”</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Ми з гордістю анонсуємо, що наша компанія долучилась до
+                                    благодійного
+                                    проєкту “Піжами для поранених” у співпраці з громадською організацією “Волонтерська
+                                    Допомога 4.5.0”. Цей проєкт має на меті забезпечити поранених захисників, які
+                                    перебувають на лікуванні в одному з прифронтових госпіталів на Харківщині,
+                                    комплектами
+                                    піжам.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide news__slide">
+                            <a href="/" class="news__card">
+                                <span class="news__badge">Новина</span>
+                                <div class="news__content">
+                                    <h3 class="news__title">Оплата кредиту через термінали EasyPay</h3>
+                                    <time class="news__date" datetime="2023-06-22">22 Червня, 2023</time>
+                                </div>
+                                <p class="news__text">Раді повідомити, що погашення кредиту стало ще простішим і
+                                    зручнішим
+                                    для вас!
+                                    Для вашої зручності наша компанія реалізувала проєкт автоматичного обміну даними з
+                                    провідною мережею платіжних терміналів самообслуговування EasyPay, яка налічує більш
+                                    ніж
+                                    19 500 активних терміналів по всій Україні.
+                                </p>
+                                <span class="news__link">
+                                    Детальніше
+                                    <img src="images/arrow-right.svg" width="21" height="18" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <button class="news__nav-button news__nav-button--next btn button-border" type="button"
+                    aria-label="Наступний відгук">
+                    <img src="images/next.svg" width="18" height="15" alt="" aria-hidden="true">
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__scroll">
+                <details class="footer__warning-details" open>
+                    <summary class="footer__warning-button">Кредит онлайн</summary>
+                    <div class="footer__warning-content">
+                        <h3>Кредит онлайн: швидкий та зручний спосіб отримати фінансову підтримку</h3>
+                        <p>
+                            У сучасному світі, де швидкість і зручність стали невід'ємною частиною нашого життя, кредити
+                            онлайн стали найбільш затребуваним фінансовим рішенням. Незалежно від вашої фінансової
+                            потреби, кредит онлайн може стати вашим надійним спутником у здійсненні мрій та досягненні
+                            фінансових цілей.
+                        </p>
+                        <h3>Швидкий та простий процес отримання кредиту:</h3>
+                        <p>Однією з головних переваг кредитів онлайн є їхній простий та швидкий процес отримання. Вам не
+                            потрібно витрачати години на походи до банку, заповнення безкінечних паперів та очікування
+                            на відповідь. Завдяки онлайн-кредитам, ви можете подати заявку зручно зі свого комп'ютера
+                            або смартфону та отримати рішення вже за кілька хвилин.</p>
+                        <h3>Доступність для всіх:</h3>
+                        <p>Кредити онлайн доступні для широкого кола осіб, незалежно від їхнього фінансового статусу. Ви
+                            можете знайти пропозиції як для користувачів з високим кредитним рейтингом, так і для тих, у
+                            кого є деякі фінансові труднощі. Це робить кредити онлайн доступними для всіх, хто потребує
+                            фінансової підтримки.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="footer__content">
+                <div class="footer__content-top">
+                    <div class="footer__content-card">
+                        <a href="/">
+                            <img src="images/logo-footer.svg" width="172" height="55" alt="Нові Кредити">
+                        </a>
+                        <div class="footer__content-image">
+                            <picture>
+                                <source srcset="images/foter-image.webp" type="image/webp">
+                                <img src="images/foter-image.png" width="380" height="153" loading="lazy" alt="">
+                            </picture>
+                        </div>
+                        <p class="footer__content-text">
+                            Товариство з обмеженою відповідальністю «Мультікредит» | ЄДРПОУ: 44653728 Адреса: 04052 м.
+                            Київ, вул. Глибочицька буд. 40, офіс 39 (літ. Н,П)
+                        </p>
+                        <div class="footer__content-bg">
+                            <picture>
+                                <source srcset="images/footer-bg.webp" type="image/webp">
+                                <img src="images/footer-bg.png" width="238" height="301" loading="lazy" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="footer__content-info">
+                        <nav class="footer__nav">
+                            <div class="footer__nav-column">
+                                <h3 class="footer__nav-title">Клієнтам</h3>
+                                <ul class="footer__nav-list">
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Інформація щодо захисту прав споживачів</a>
+                                    </li>
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Інформація для захищеної категорії
+                                            Споживачів</a>
+                                    </li>
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Пам'ятка для військовослужбовців</a>
+                                    </li>
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Політика конфіденційності</a>
+                                    </li>
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Архів</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__nav-column">
+                                <h3 class="footer__nav-title">Корисна інформація</h3>
+                                <ul class="footer__nav-list">
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Кредит без відмови</a>
+                                    </li>
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Кредит онлайн</a>
+                                    </li>
+                                    <li class="footer__nav-item">
+                                        <a href="/" class="footer__nav-link">Гроші до зарплати</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="footer__contacts">
+                            <a href="tel:+380800301008" class="footer__contact-phone">0 800 301 008</a>
+                            <a href="mailto:info@novikredyty.com.ua"
+                                class="footer__contact-email">info@novikredyty.com.ua</a>
+                            <div class="footer__social">
+                                <a href="/" class="footer__social-link">
+                                    <img src="images/ic1.svg" width="24" height="25" alt="Facebook">
+                                </a>
+                                <a href="/" class="footer__social-link">
+                                    <img src="images/ic2.svg" width="24" height="25" alt="Instagram">
+                                </a>
+                            </div>
+                            <a href="/" class="footer__cta-button btn button-red">Оформити кредит
+                                <img src="images/arrow.svg" width="21" height="18" alt="">
+                            </a>
+                            <a href="/" class="footer__developer">
+                                <img src="images/log.svg" width="141" height="25" alt="Логотип розробника">
+                                <span class="footer__developer-text">РОЗРОБКА САЙТУ</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">© 2025 Нові Кредити | Novi Kredyty®. Весь вміст доступний за
+                        міжнародною ліцензією Creative Commons Attribution 4.0, якщо не зазначено інше. | All content is
+                        available under the Creative Commons Attribution 4.0 International license unless otherwise
+                        noted.</p>
+                    <p class="footer__license">ТОВ "МУЛЬТІКРЕДИТ" Свідоцтво про реєстрацію фінансової установи ФК
+                        №В0000506 від 28.01.2022, видане Національним банком України". "Ліцензія Національного банку
+                        України з надання коштів та банківських металів у кредит" від 29.03.2024 р.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
