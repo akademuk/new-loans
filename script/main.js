@@ -229,11 +229,14 @@ function initReviewsSlider() {
     },
 
     a11y: true,
-    prevSlideMessage: 'Предыдущий слайд.',
-    nextSlideMessage: 'Следующий слайд.',
-    firstSlideMessage: 'Это первый слайд.',
-    lastSlideMessage: 'Это последний слайд.',
-    paginationBulletMessage: 'Перейти к слайду {{index}}',
+     on: {
+            slideChange: function () {
+                // Обновляем aria-label для текущего слайда
+                const currentSlide = this.slides[this.activeIndex];
+                const currentLabel = currentSlide.getAttribute('aria-label');
+                this.el.setAttribute('aria-label', currentLabel);
+            }
+        }
   });
 }
 

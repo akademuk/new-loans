@@ -1176,6 +1176,7 @@ main {
     padding: 8px 0;
 }
 
+
 .loan-application__accordion {
     width: 100%;
     display: flex;
@@ -2478,8 +2479,7 @@ details[open] .footer__warning-button::after {
     .header__nav-list {
         display: flex;
         align-items: center;
-        gap: 24px;
-        flex: 1 0 0;
+        gap: 27px;
     }
 
     .header__nav-dropdown {
@@ -2689,7 +2689,7 @@ details[open] .footer__warning-button::after {
 
     .get-credit__content {
         padding-top: 24px;
-        gap: 48px;
+        gap: 27px;
     }
 
     .get-credit__steps {
@@ -2740,6 +2740,13 @@ details[open] .footer__warning-button::after {
 
     .loan-application__info-title {
         font-size: 21px;
+        padding: 32px 32px 0 32px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .loan-application__tabs {
+        padding: 0 32px;
     }
 
     .loan-application__tab {
@@ -2752,7 +2759,7 @@ details[open] .footer__warning-button::after {
     }
 
     .loan-application__tab-content {
-        padding: 32px;
+        padding: 0 32px;
     }
 
     .advantages {
@@ -3100,6 +3107,15 @@ details[open] .footer__warning-button::after {
     .footer__nav-column {
         min-width: 288px;
         flex: 1 0 0;
+    }
+
+    .loan-application__content .credit-form__field--row .credit-form__label,
+    .loan-application__content .credit-form__term strong {
+        font-size: 21px;
+    }
+
+    .loan-application__docs {
+        margin-bottom: 62px;
     }
 }
 
