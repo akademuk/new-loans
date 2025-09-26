@@ -533,6 +533,10 @@ main {
     margin-bottom: 48px;
 }
 
+.faq__category-header img {
+    object-fit: contain;
+}
+
 .credit-form__label {
     display: flex;
     flex-direction: column;
