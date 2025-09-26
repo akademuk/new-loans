@@ -2588,7 +2588,7 @@ details[open] .footer__warning-button::after {
     .hero__title {
         align-items: flex-start;
         gap: 16px;
-        max-width: 75%;
+        max-width: 60%;
     }
 
     .hero__title-primary {
