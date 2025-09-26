@@ -3189,4 +3189,8 @@ details[open] .footer__warning-button::after {
         max-width: max-content;
         min-width: max-content;
     }
+
+    .advantages__box-content {
+        gap: 24px;
+    }
 }
