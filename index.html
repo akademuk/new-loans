@@ -26,9 +26,12 @@
     
     <title>Нові Кредити</title>
 
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/style.css">
 
 </head>
@@ -206,7 +209,7 @@
                                 <source srcset="images/hero-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                                 <source srcset="images/hero-desktop.png" media="(min-width: 1280px)">
                                 <source srcset="images/hero-mobile.webp" media="(max-width: 1279px)" type="image/webp">
-                                <img src="images/hero-mobile.png" width="361" height="918" alt="Hero banner image">
+                                <img src="images/hero-mobile.png" width="361" height="918" alt="Hero banner image" loading="lazy">
                             </picture>
                         </div>
 
@@ -1536,9 +1539,9 @@
 
 
 
-    <script src="script/jquery-3.7.0.min.js" defer></script>
-    <script src="script/swiper-bundle.min.js" defer></script>
-    <script src="script/main.js" defer></script>
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
