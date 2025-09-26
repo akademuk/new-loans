@@ -2349,7 +2349,11 @@ details[open] .footer__warning-button::after {
 
 
 
-
+@media (min-width: 576px) {
+    .news__all-link {
+        max-width: 316px;
+    }
+}
 
 
 @media (min-width: 1280px) {
@@ -2469,6 +2473,7 @@ details[open] .footer__warning-button::after {
         padding: 8px;
         max-width: 1800px;
         border-radius: 12px;
+        margin: 0 auto;
     }
 
     .header__nav {
@@ -2727,7 +2732,7 @@ details[open] .footer__warning-button::after {
     }
 
     .loan-application .wrapper {
-        padding: 64px 12px;
+        padding: 64px 12px 69px;
     }
 
     .loan-application__content .credit-box__content {
@@ -2964,6 +2969,11 @@ details[open] .footer__warning-button::after {
         height: 180px;
         padding: 64px 72px 64px 48px;
         text-align: left;
+        min-width: 276px;
+    }
+
+    .faq__accordion {
+        gap: 20px;
     }
 
     .reviews__text {
@@ -3048,7 +3058,7 @@ details[open] .footer__warning-button::after {
     }
 
     .footer .wrapper {
-        gap: 144px;
+        gap: 161px;
         max-width: 100%;
     }
 
@@ -3083,7 +3093,6 @@ details[open] .footer__warning-button::after {
         padding: 48px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
         align-self: stretch;
         height: 100%;
     }
@@ -3102,6 +3111,23 @@ details[open] .footer__warning-button::after {
         gap: 48px;
         align-self: stretch;
         flex-wrap: wrap;
+        flex: 1;
+    }
+
+    .footer__nav-title {
+        font-size: 18px;
+    }
+
+    .footer__contact-phone {
+        font-size: 37px;
+    }
+
+    .footer__contact-email {
+        font-size: 16px;
+    }
+
+    .footer__contacts {
+        flex: none;
     }
 
     .footer__nav-column {
@@ -3117,10 +3143,50 @@ details[open] .footer__warning-button::after {
     .loan-application__docs {
         margin-bottom: 62px;
     }
-}
 
-@media (min-width: 576px) {
+    .loan-application__table-title {
+        font-size: 18px;
+    }
+
+    .loan-application__table-box {
+        gap: 8px;
+    }
+    
+    .advantages__box-content-img img {
+        width: 25px;
+        height: 30px;
+    }
+
+    .pay__card-button {
+        font-size: 14px;
+        padding: 8px 0;
+        width: calc(50% - 4px);
+    }
+
+    .reviews__nav-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .faq__warning-content {
+        min-height: 138px;
+        max-height: 138px;
+    }
+
+    .faq__category-title {
+        font-size: 21px;
+    }
+
+    .faq__category-header {
+        gap: 11px;
+    }
+
+    .faq__category {
+        gap: 21px;
+    }
+
     .news__all-link {
-        max-width: 316px;
+        max-width: max-content;
+        min-width: max-content;
     }
 }

@@ -248,12 +248,11 @@ function initNewsSlider() {
       nextEl: ".news__nav-button--next",
       prevEl: ".news__nav-button--prev",
     },
-    a11y: true,
-    prevSlideMessage: 'Предыдущий слайд.',
-    nextSlideMessage: 'Следующий слайд.',
-    firstSlideMessage: 'Это первый слайд.',
-    lastSlideMessage: 'Это последний слайд.',
-    paginationBulletMessage: 'Перейти к слайду {{index}}',
+    breakpoints: {
+      1280: {
+        spaceBetween: 24,
+      }
+    }
   });
 }
 
