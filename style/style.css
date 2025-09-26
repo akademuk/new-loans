@@ -2342,6 +2342,10 @@ details[open] .footer__warning-button::after {
     letter-spacing: 0.12px;
 }
 
+.get-credit__background {
+    display: none;
+}
+
 
 
 
@@ -3030,6 +3034,27 @@ details[open] .footer__warning-button::after {
 
     .news__slider-box .news__nav-button {
         display: flex;
+    }
+
+    .footer {
+        padding: 32px 52px;
+    }
+
+    .footer .wrapper {
+        gap: 144px;
+        max-width: 100%;
+    }
+
+    .footer__scroll {
+        max-width: 1176px;
+    }
+
+    .footer__content {
+        max-width: 1816px;
+    }
+
+    .get-credit__background {
+        display: block;
     }
 }
 
