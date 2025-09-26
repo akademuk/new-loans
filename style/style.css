@@ -480,7 +480,7 @@ main {
 .hero__banner-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -549,7 +549,6 @@ main {
     border-radius: 8px;
     border: 1px solid #F4F4F1;
     background: #F9FAFB;
-    color: #9B9B99;
     font-family: inherit;
     font-size: 14px;
     font-weight: 400;

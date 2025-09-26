@@ -303,9 +303,10 @@
                     <div class="get-credit__container">
                         <div class="get-credit__image">
                             <picture>
-                                <source srcset="images/image.webp" type="image/webp">
-                                <img src="images/image.jpg" width="313" height="376" loading="lazy"
-                                    alt="Процес отримання кредиту">
+                                <source srcset="images/image.webp" media="(min-width: 1280px)" type="image/webp">
+                                <source srcset="images/image.jpg" media="(min-width: 1280px)">
+                                <source srcset="images/image-mobile.webp" media="(max-width: 1279px)" type="image/webp">
+                                <img src="images/image-mobile.jpg" width="313" height="376" alt="Процес отримання кредиту" loading="lazy">
                             </picture>
                         </div>
 
@@ -875,7 +876,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="swiper reviews__slider" role="region" aria-label="Відгуки клієнтів">
+                <div class="swiper reviews__slider" aria-label="Відгуки клієнтів">
                     <div class="swiper-wrapper reviews__slider-wrapper">
                         <article class="swiper-slide reviews__slide">
                             <blockquote class="reviews__quote">
@@ -1154,7 +1155,7 @@
                     aria-label="Попередній відгук">
                     <img src="images/prev.svg" width="18" height="15" alt="" aria-hidden="true">
                 </button>
-                <div class="swiper news__slider" role="region" aria-label="Новини компанії">
+                <div class="swiper news__slider">
                     <div class="swiper-wrapper news__slider-wrapper">
                         <article class="swiper-slide news__slide">
                             <a href="/" class="news__card">
