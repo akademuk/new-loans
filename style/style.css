@@ -3056,6 +3056,51 @@ details[open] .footer__warning-button::after {
     .get-credit__background {
         display: block;
     }
+
+    .footer__content-top {
+        gap: 24px;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .footer__content-card {
+        width: 476px;
+    }
+
+    .footer__content-text {
+        margin-top: auto;
+    }
+
+    .footer__content-card-box {
+        display: flex;
+        padding: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+        height: 100%;
+    }
+
+    .footer__content-info {
+        padding: 48px;
+        flex: 1 0 0;
+        flex-wrap: nowrap;
+    }
+
+    .footer__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 48px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    .footer__nav-column {
+        min-width: 288px;
+        flex: 1 0 0;
+    }
 }
 
 @media (min-width: 576px) {
