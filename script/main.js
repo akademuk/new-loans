@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion();
   initReviewsSlider();
   initNewsSlider();
+  initSmoothScroll();
 });
 
 // Инициализация мобильного бургер-меню
@@ -397,12 +398,29 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 
+// Инициализация плавного скролла к якорям
+function initSmoothScroll() {
+  document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // отключаем стандартный прыжок
 
+      const targetId = this.getAttribute('href'); // получаем ID якоря
+      const targetElement = document.querySelector(targetId);
 
+      if (targetElement) {
+        // Получаем смещение для фиксированной шапки
+        const headerOffset = window.innerWidth >= 1280 ? 110 : 0;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-
-
-
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
 
 
 
