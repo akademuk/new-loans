@@ -2439,6 +2439,11 @@ details[open] .footer__warning-button::after {
     flex: 1 0 0;
 }
 
+.blog__hero-content-text h2 {
+    font-size: 18px;
+    color: #1D1D1B;
+}
+
 .blog__hero-content--img {
     display: flex;
     overflow: hidden;
@@ -2613,6 +2618,29 @@ details[open] .footer__warning-button::after {
     gap: 24px;
     flex: 1 0 0;
     width: 100%;
+}
+
+.blog__hero-content-text--desc {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.blog__hero-content-text--faq {
+    gap: 8px;
+}
+
+.blog__hero-content-text--faq h1 {
+    margin-bottom: 4px;
+}
+
+.blog__hero-content-text--faq p {
+    font-size: 14px;
+}
+
+.article__content-box .faq__accordion {
+    background: transparent;
+    padding: 0;
 }
 
 .article__content-boxing img {
@@ -3627,7 +3655,7 @@ details[open] .footer__warning-button::after {
         display: flex;
         max-width: 1176px;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: stretch;
         flex: 1 0 0;
     }
 
@@ -3675,10 +3703,15 @@ details[open] .footer__warning-button::after {
 
     .article__sidebar {
         background: transparent;
+        padding: 0;
+        gap: 16px;
+        height: auto;
+    }
+
+    .credit-box__content {
         position: sticky;
         top: 100px;
         gap: 16px;
-        padding: 0;
     }
 
     .credit-box__content-boxs {
@@ -3693,6 +3726,7 @@ details[open] .footer__warning-button::after {
         border-radius: 24px;
         background: #F9FAFB;
         padding: 12px;
+        width: 100%;
     }
 
     .article__sidebar .credit-box__title {
