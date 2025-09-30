@@ -423,9 +423,48 @@ function initSmoothScroll() {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+	function setActiveBlock() {
+		const blocks = document.querySelectorAll('.document');
+		blocks.forEach(block => {
+			block.classList.remove('active');
+		});
+
+		const radio1 = document.getElementById('radioDok');
+		const radio2 = document.getElementById('radioDok2');
+
+		if (radio1 && radio1.checked) {
+			const document1 = document.getElementById('document1');
+			if (document1) {
+				document1.classList.add('active');
+			}
+		} else if (radio2 && radio2.checked) {
+			const document2 = document.getElementById('document2');
+			if (document2) {
+				document2.classList.add('active');
+			}
+		}
+	}
+
+	const radioButtons = document.querySelectorAll('.form__checkbox');
+	if (radioButtons.length > 0) {
+		radioButtons.forEach(radio => {
+			radio.addEventListener('change', setActiveBlock);
+		});
+	}
+
+	setActiveBlock();
+});
 
 
-
-
-
-
+const addressDisableCheckbox = document.getElementById('addressDisable');
+if (addressDisableCheckbox) {
+	addressDisableCheckbox.addEventListener('change', function () {
+		const formBoxDisable = document.querySelector('.form__box-disable');
+		if (this.checked) {
+			formBoxDisable.style.maxHeight = '600px';
+		} else {
+			formBoxDisable.style.maxHeight = '0';
+		}
+	});
+}
