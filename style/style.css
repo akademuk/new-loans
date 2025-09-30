@@ -87,49 +87,50 @@ body {
 }
 
 
-input, 
+input,
 textarea,
 .form__input {
- 	min-height: 52px;
-	width: 100%;
-	padding: 12px;
-  	transition: all 0.3s ease; 
-	border-radius: 8px;
-	border: 1px solid #F4F4F1;
-	background: #F9FAFB;
+    min-height: 52px;
+    width: 100%;
+    padding: 12px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 1px solid #F4F4F1;
+    background: #F9FAFB;
     font-family: 'Inter', Arial, sans-serif;
-	color: #9B9B99;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 1.2; 
-	position: relative;
-	outline: none;
+    color: #9B9B99;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    position: relative;
+    outline: none;
 }
 
-input::placeholder, textarea::placeholder {
-	font-family: 'Inter', Arial, sans-serif;
-	color: #9B9B99;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 1.2; 
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #9B9B99;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
-input:focus, 
+input:focus,
 textarea:focus,
 .form__input:focus {
-	border: 1px solid #1C64F2;
+    border: 1px solid #1C64F2;
 }
 
 input:hover,
 textarea:hover,
 .form__input:hover {
-	border: 1px solid #3D89DF;
+    border: 1px solid #3D89DF;
 }
 
 input:active,
 textarea:active,
 .form__input:active {
-	border: 1px solid #1C64F2;
+    border: 1px solid #1C64F2;
 }
 
 label {
@@ -151,71 +152,71 @@ label {
 
 
 textarea {
-  min-height: 100px; 
-  resize: none;
+    min-height: 100px;
+    resize: none;
 }
 
 
 input[type="checkbox"] {
-	border-radius: 4px;
-	width: 24px;
-	min-width: 24px;
-	height: 24px;
+    border-radius: 4px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
     min-height: 24px;
-	background-color: #fff;
-	border: 1px solid #868684;
-	transition: background-color 0.3s ease;
-	appearance: none;
-  	outline: none;
-	position: relative;
+    background-color: #fff;
+    border: 1px solid #868684;
+    transition: background-color 0.3s ease;
+    appearance: none;
+    outline: none;
+    position: relative;
 }
 
 input[type="checkbox"]:checked {
-  background-color: #E30613;
-  border: 1px solid #E30613;
+    background-color: #E30613;
+    border: 1px solid #E30613;
 }
 
 input[type="checkbox"]:checked::after {
-  content: "";
-  background: url('../images/check.svg');
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    content: "";
+    background: url('../images/check.svg');
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 input[type="radio"] {
-	appearance: none;
-	outline: none;
-	width: 24px;
-	height: 24px;
-	min-width: 24px;
+    appearance: none;
+    outline: none;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
     min-height: 24px;
     max-height: 24px;
-	border-radius: 50%;
-	border: 1px solid #868684;
-	position: relative;
-	appearance: none;
-  	outline: none;
+    border-radius: 50%;
+    border: 1px solid #868684;
+    position: relative;
+    appearance: none;
+    outline: none;
 }
 
 input[type="radio"]:checked {
-	background-color: #fff;
-	border-color: #E30613;
+    background-color: #fff;
+    border-color: #E30613;
 }
 
 input[type="radio"]:checked::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #E30613;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E30613;
 }
 
 
@@ -2993,7 +2994,7 @@ details[open] .footer__warning-button::after {
     letter-spacing: normal;
 }
 
-.blog__hero-content--about .blog__hero-content-text--faq p{
+.blog__hero-content--about .blog__hero-content-text--faq p {
     font-size: 16px;
 }
 
@@ -3068,8 +3069,8 @@ details[open] .footer__warning-button::after {
     align-self: stretch;
 }
 
-.registration-form-title h3{
-    color:#1D1D1B;
+.registration-form-title h3 {
+    color: #1D1D1B;
     font-size: 18px;
     font-weight: 600;
 }
@@ -3137,7 +3138,7 @@ details[open] .footer__warning-button::after {
 }
 
 .registration-content__box p {
-    color:#5E5E5C;
+    color: #5E5E5C;
     font-weight: 400;
     display: inline;
 }
@@ -3201,7 +3202,7 @@ details[open] .footer__warning-button::after {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    align-self: stretch; 
+    align-self: stretch;
 }
 
 .form__checkbox-group {
@@ -3209,7 +3210,7 @@ details[open] .footer__warning-button::after {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    align-self: stretch; 
+    align-self: stretch;
 }
 
 .form__box-label {
@@ -3228,7 +3229,7 @@ details[open] .footer__warning-button::after {
     align-self: stretch;
 }
 
-.form__checkbox-group--radio .form__checkbox-label{
+.form__checkbox-group--radio .form__checkbox-label {
     align-items: center;
     display: flex;
     gap: 8px;
@@ -3268,7 +3269,7 @@ details[open] .footer__warning-button::after {
     text-decoration: none;
 }
 
-.form__actions .form__sign-in img{
+.form__actions .form__sign-in img {
     transform: rotate(180deg);
 }
 
@@ -3288,6 +3289,194 @@ details[open] .footer__warning-button::after {
     gap: 24px;
     align-self: stretch;
 }
+
+.registration-content__box a {
+    color: #1C64F2;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.form__checkbox-group a {
+    color: #1C64F2;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.form__checkbox-group a:hover {
+    color: #3D89DF;
+}
+
+.form__checkbox-group a:active {
+    color: #0046D4;
+}
+
+.registration-content__box a:hover {
+    color: #3D89DF;
+}
+
+.registration-content__box a:active {
+    color: #0046D4;
+}
+
+.registration-form .registration-form {
+    padding: 12px;
+    background: #fff;
+}
+
+.registration-form--with-calc .registration-form-box {
+    padding: 0;
+}
+
+.registration-form--with-calc .credit-form__label {
+    font-size: 18px;
+}
+
+.registration-form--with-calc .credit-form__term strong {
+    font-size: 18px;
+}
+
+.registration-form .loan-application__calc {
+    padding: 0;
+}
+
+.registration-form--with-calc {
+    background: #fff;
+}
+
+.registration-form--with-calc .credit-box__content {
+    padding: 0;
+    width: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base-timer {
+    position: relative;
+    max-width: 237px;
+    width: 100%;
+    height: 100%;
+    max-height: 237px;
+}
+
+.base-timer__svg {
+    transform: scaleX(1);
+    overflow: visible;
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 5px;
+    stroke: #f0f2f5;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 5px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.arc {
+    color: #E30613;
+    stroke-linecap: butt;
+}
+
+.base-timer__label {
+    position: absolute;
+    max-width: 237px;
+    width: 100%;
+    height: 100%;
+    max-height: 237px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1D1D1B;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.registration-form--timer .registration-form-box {
+    padding: 24px 12px;
+    border-radius: 16px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+}
+
+.form__box-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.form__box-title h2 {
+    color: #1D1D1B;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.form__box-title p {
+    color: #4B4B49;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.form__checkbox-group.form__checkbox-group--two {
+    flex-direction: column;
+}
+
+.form__checkbox-group.form__checkbox-group--radio {
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 576px) {
     .news__all-link {
@@ -4208,7 +4397,7 @@ details[open] .footer__warning-button::after {
         padding-top: 168px;
     }
 
-    
+
     .article {
         padding: 32px 52px;
     }
@@ -4277,7 +4466,7 @@ details[open] .footer__warning-button::after {
     }
 
     .credit-box__content-boxs {
-        padding: 24px; 
+        padding: 24px;
         border-radius: 16px;
         background: #FFF;
     }
@@ -4292,7 +4481,7 @@ details[open] .footer__warning-button::after {
     }
 
     .article__sidebar .credit-box__title {
-        font-size: 21px;    
+        font-size: 21px;
     }
 
     .article__sidebar-bg {
@@ -4341,7 +4530,7 @@ details[open] .footer__warning-button::after {
     }
 
     .article__sidebar-bg ul li a:hover::before {
-       filter: brightness(0) saturate(100%) invert(41%) sepia(99%) saturate(1920%) hue-rotate(336deg) brightness(101%) contrast(101%);
+        filter: brightness(0) saturate(100%) invert(41%) sepia(99%) saturate(1920%) hue-rotate(336deg) brightness(101%) contrast(101%);
     }
 
     .article__sidebar-bg ul li a:active::before {
@@ -4512,5 +4701,43 @@ details[open] .footer__warning-button::after {
 
     .form__checkbox-group {
         flex-direction: row;
+    }
+
+    .registration-form--with-calc {
+        background: #F9FAFB;
+    }
+
+    .registration-form .registration-form-box {
+        padding: 12px;
+    }
+
+    .registration-form--with-calc .credit-box__content {
+        padding: 32px;
+        background: #fff;
+        position: static;
+    }
+
+    .registration-form--with-calc .credit-form__label {
+        font-size: 21px;
+    }
+
+    .registration-form--with-calc .credit-form__term strong {
+        font-size: 21px;
+    }
+
+    .registration-form .loan-application__calc {
+        gap: 24px;
+    }
+
+    .registration-form .registration-form-box {
+        padding: 24px;
+    }
+
+    .form__box-title h2 {
+        font-size: 21px;
+    }
+
+    .form__box-title p {
+        font-size: 16px;
     }
 }
