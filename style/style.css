@@ -2630,10 +2630,6 @@ details[open] .footer__warning-button::after {
     gap: 8px;
 }
 
-.blog__hero-content-text--faq h1 {
-    margin-bottom: 4px;
-}
-
 .blog__hero-content-text--faq p {
     font-size: 14px;
 }
@@ -2725,6 +2721,138 @@ details[open] .footer__warning-button::after {
 
 .article__sidebar .faq__accordion {
     padding: 0;
+}
+
+.article-about--title {
+    color: #1D1D1B;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.article-about .article__content-boxing img {
+    height: 220px;
+    border-radius: 20px;
+    display: block;
+    margin: 20px 0 9px 0;
+}
+
+.article__content-boxing--grid {
+    padding: 32px 16px 16px 16px;
+    border-radius: 24px;
+    background: #F4F4F1;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.article__content-boxing--grid-box {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+}
+
+.article__content-boxing--grid-item {
+    display: flex;
+    height: 204px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 176px;
+    gap: 8px;
+    border-radius: 16px;
+    background: #FFF;
+}
+
+.article__content-boxing--grid-item h4 {
+    color: #1D1D1B;
+    font-weight: 600;
+}
+
+.article__content-boxing--grid-item p {
+    color: #393937;
+    font-weight: 400;
+}
+
+.article__content-boxing--grid h3 {
+    color: #1D1D1B;
+    font-size: 18px;
+}
+
+.article__content-boxing--big {
+    margin: 9px 0 0 0;
+    color: #1D1D1B;
+    font-weight: 600;
+}
+
+.article__content-boxing--badge {
+    padding: 32px;
+    border-radius: 20px;
+    background: #F9FAFB;
+    margin-bottom: 7px;
+}
+
+.article__content-boxing--badge p {
+    color: #1D1D1B;
+    font-weight: 600;
+}
+
+.article__content-boxing--badge p span {
+    color: #E30613
+}
+
+.article__content-faq--about {
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #DDDDDB;
+    background: #FFF;
+    gap: 32px;
+}
+
+.article__content-faq--about .faq__accordion-item {
+    gap: 0;
+}
+
+.article__content-faq--about .faq__accordion-item .faq__accordion-header {
+    min-height: 38px;
+    align-items: flex-start;
+}
+
+.article__content-faq--about .faq__accordion {
+    gap: 20px
+}
+
+.article__content-faq--about .faq__accordion-body {
+    padding: 0;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article__content-faq--about .loan-application__doc-link {
+    padding: 12px;
+}
+
+.article__content-faq--about .loan-application__doc-img {
+    display: none;
+}
+
+.article__content-faq--about .loan-application__doc-description {
+    font-size: 14px;
+    letter-spacing: normal;
+}
+
+.blog__hero-content--about .blog__hero-content-text--faq p{
+    font-size: 16px;
+}
+
+.advantages--about {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 @media (min-width: 576px) {
@@ -3808,5 +3936,69 @@ details[open] .footer__warning-button::after {
     .article__content-faq .faq__accordion {
         padding: 0;
         background: transparent;
+    }
+
+    .blog__hero-content--about .blog__hero-content-text--faq p {
+        font-size: 18px;
+    }
+
+    .article-about--title {
+        font-size: 30px;
+    }
+
+    .advantages--about h3 {
+        font-size: 16px;
+    }
+
+    .article-about .article__content-boxing img {
+        height: 376px;
+        margin: 12px 0 0 0;
+    }
+
+    .article__content-boxing--grid {
+        margin-top: -16px;
+    }
+
+    .article__content-boxing--grid h3 {
+        font-size: 21px;
+    }
+
+    .article__content-boxing--grid-item h4 {
+        font-size: 16px;
+    }
+
+    .article__content-boxing--grid-box {
+        gap: 16px;
+    }
+
+    .article__content-boxing--big {
+        font-size: 16px;
+        margin: -18px 0 0 0;
+    }
+
+    .article__content-boxing--badge {
+        width: 100%;
+        margin-top: -24px;
+        margin-bottom: -15px;
+    }
+
+    .article__content-boxing--badge p {
+        font-size: 16px;
+    }
+
+    .article__content-faq--about .loan-application__doc-img {
+        display: flex;
+    }
+
+    .article__content-faq--about .faq__accordion-body {
+        padding: 0 16px;
+    }
+
+    .article__content-faq--about .loan-application__doc-link {
+        padding: 20px;
+    }
+
+    .reviews--about {
+        padding-bottom: 0;
     }
 }
