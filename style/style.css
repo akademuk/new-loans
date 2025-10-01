@@ -4716,9 +4716,10 @@ details[open] .footer__warning-button::after {
     }
 
     .credit-box__content {
-        padding: 12px;
-        border-radius: 24px;
+        padding: 32px;
+        border-radius: 8px;
         background: #F9FAFB;
+        gap: 0;
     }
 
     .article__content-boxing img {
