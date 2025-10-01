@@ -5083,3 +5083,196 @@ details[open] .footer__warning-button::after {
         gap: 12px;
     }
 }
+
+
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  padding: 32px 16px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-menu {
+  border-radius: 16px;
+  background: #F9FAFB;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .popup-menu {
+    max-width: 560px;
+    padding: 16px;
+    border-radius: 24px;
+  }
+}
+
+.popup-menu .close-popup {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #fff;
+  position: absolute;
+  border: none;
+  top: -35px;
+  right: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .popup-menu .close-popup {
+    top: 0;
+    right: -40px;
+  }
+}
+
+.popup-menu .close-popup span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-menu .close-popup span::before {
+  font-size: 20px;
+  color: #757575;
+}
+
+.popup-menu__content {
+  border-radius: 12px;
+  display: flex;
+  padding: 16px 8px;
+  flex-direction: column;
+  background: #fff;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  max-height: 325px;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .popup-menu__content {
+    padding: 24px;
+    max-height: 427px;
+    border-radius: 20px;
+  }
+}
+
+.popup-menu .repayment-schedule__title {
+  color: var(--color-gray-900);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .popup-menu .repayment-schedule__title {
+    font-size: 21px;
+  }
+}
+
+.popup-menu .repayment-schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  height: 100%;
+  overflow: hidden;
+}
+
+#popup-overlay.show #popup-menu {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.repayment-schedule__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.repayment-schedule__table th,
+.repayment-schedule__table td {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 4px 0;
+  padding-left: 4px;
+}
+
+@media (min-width: 1024px) {
+  .repayment-schedule__table th,
+  .repayment-schedule__table td {
+    padding: 8px 0 8px 8px;
+    font-size: 14px;
+  }
+}
+
+
+.repayment-schedule__table td:nth-child(2) {
+  color: var(--color-gray-900);
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.repayment-schedule__table td:nth-child(3) {
+  color: var(--color-gray-600);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 120%;
+  padding-right: 4px;
+}
+
+@media (min-width: 1024px) {
+  .repayment-schedule__table td:nth-child(3) {
+    padding: 8px 8px 8px 0;
+    font-size: 14px;
+  }
+}
+
+.repayment-schedule__table tbody tr:nth-child(even) {
+  background: #F9FAFB;
+}
+
+.repayment-schedule-scroll {
+  overflow: auto;
+  width: 100%;
+  padding-right: 4px;
+}

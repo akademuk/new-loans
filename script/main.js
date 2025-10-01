@@ -533,3 +533,32 @@ if (shouldRunTimer) {
 		timer.setAttribute("stroke-dasharray", circleDasharray);
 	}
 }
+
+
+const openButtons = document.querySelectorAll('.open-popup');
+const closeButtons = document.querySelectorAll('.close-popup');
+const overlay = document.getElementById('popup-overlay');
+
+if (openButtons.length > 0 && closeButtons.length > 0 && overlay) {
+	function openPopup() {
+		overlay.classList.add('show');
+		document.body.classList.add('no-scroll');
+	}
+
+	function closePopup() {
+		overlay.classList.remove('show');
+		document.body.classList.remove('no-scroll');
+	}
+
+	openButtons.forEach(btn => {
+		btn.addEventListener('click', openPopup);
+	});
+
+	closeButtons.forEach(btn => {
+		btn.addEventListener('click', closePopup);
+	});
+
+	overlay.addEventListener('click', e => {
+		if (e.target === overlay) closePopup();
+	});
+}
