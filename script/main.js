@@ -562,3 +562,17 @@ if (openButtons.length > 0 && closeButtons.length > 0 && overlay) {
 		if (e.target === overlay) closePopup();
 	});
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const deleteButtons = document.querySelectorAll('.personal-account__form-card-delate');
+
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const cardContainer = this.closest('.form__box-labels');
+      if (cardContainer) {
+        cardContainer.remove();
+      }
+    });
+  });
+});
