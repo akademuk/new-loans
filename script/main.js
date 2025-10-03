@@ -456,6 +456,40 @@ document.addEventListener("DOMContentLoaded", function () {
 	setActiveBlock();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+	function setActiveBlocks() {
+		const blocks = document.querySelectorAll('.documents');
+		blocks.forEach(block => {
+			block.classList.remove('active');
+		});
+
+		const radio3 = document.getElementById('radioDok3');
+		const radio4 = document.getElementById('radioDok4');
+
+		if (radio3 && radio3.checked) {
+			const document3 = document.getElementById('document3');
+			if (document3) {
+				document3.classList.add('active');
+			}
+		} else if (radio4 && radio4.checked) {
+			const document4 = document.getElementById('document4');
+			if (document4) {
+				document4.classList.add('active');
+			}
+		}
+	}
+
+	const radioButtons = document.querySelectorAll('[name="indifacation"]');
+	if (radioButtons.length > 0) {
+		radioButtons.forEach(radio => {
+			radio.addEventListener('change', setActiveBlocks);
+		});
+	}
+
+	setActiveBlocks();
+});
+
+
 
 const addressDisableCheckbox = document.getElementById('addressDisable');
 if (addressDisableCheckbox) {

@@ -3235,11 +3235,13 @@ details[open] .footer__warning-button::after {
     width: 100%;
 }
 
-.document {
+.document,
+.documents {
     display: none;
 }
 
-.document.active {
+.document.active,
+.documents.active  {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -4087,13 +4089,38 @@ details[open] .footer__warning-button::after {
     height: 24px;
 }
 
+.personal-account__text--date::before {
+    content: none;
+}
 
+.personal-account__text--date input{
+    padding: 12px;
+}
 
+.personal-account__save-cards--label--full,
+.personal-account__save-cards--label--full-width {
+    width: 100%;
+}
 
+.personal-account__save-cards--label--file .personal-account__text::before {
+    content: "";
+    background: url(../images/file.svg) no-repeat center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
 
-
-
-
+.personal-account__full-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
 
 
 
@@ -5629,6 +5656,29 @@ details[open] .footer__warning-button::after {
 
     .personal-account__save-cards--label {
         min-width: 222px;
+    }
+
+    .personal-account__save-cards--label--full-width {
+        min-width: 100%;
+    }
+
+    .personal-account__save-cards--label--full {
+        min-width: 276px;
+    }
+
+    .personal-account__full-info .form__actions .btn {
+        width: max-content;
+        flex: none
+    }
+
+    .personal-account__full-info .form__checkbox-label {
+        flex: 1;
+    }
+
+    .personal-account__full-info .document,
+    .personal-account__full-info .documents {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 

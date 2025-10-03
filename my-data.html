@@ -206,7 +206,390 @@
     </header>
 
     <main class="main__global-grid">
+        <div class="breadcrumb">
+            <div class="wrapper">
+                <ul class="breadcrumb__list" aria-label="Хлебные крошки">
+                    <li class="breadcrumb__item">
+                        <a href="/" class="breadcrumb__item--link">Головна</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="/" class="breadcrumb__item--link">Персональний кабінет</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__item--text">Мої дані</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="personal-account__section">
+            <div class="container">
+                <aside class="personal-account__sidebar">
+                    <div class="personal-account__sidebar-container">
+                        <h1>👋 Вітаємо, Володимир Ващенко!</h1>
+                        <div class="personal-account__sidebar-main" id="sidebarMain">
+                            <ul class="personal-account__sidebar-list">
+                                <li class="personal-account__sidebar-item personal-account__sidebar-item--active">
+                                    <a href="my-credits.html" class="personal-account__sidebar-link btn button-border">
+                                        <img src="images/cabinet-icon1.svg" width="14" height="18" alt="">
+                                        Мої кредити
+                                    </a>
+                                </li>
+                                <li class="personal-account__sidebar-item">
+                                    <a href="my-data.html" class="personal-account__sidebar-link btn button-black">
+                                        <img src="images/cabinet-icon2.svg" width="14" height="18" alt="">
+                                        Мої дані
+                                    </a>
+                                </li>
+                                <li class="personal-account__sidebar-item">
+                                    <a href="my-cards.html" class="personal-account__sidebar-link btn button-border">
+                                        <img src="images/cabinet-icon3.svg" width="14" height="18" alt="">
+                                        Мої картки
+                                    </a>
+                                </li>
+                                <li class="personal-account__sidebar-item">
+                                    <a href="history-credits.html"
+                                        class="personal-account__sidebar-link btn button-border">
+                                        <img src="images/cabinet-icon4.svg" width="14" height="18" alt="">
+                                        Iсторія кредитів
+                                    </a>
+                                </li>
+                                <li class="personal-account__sidebar-item">
+                                    <a href="/" class="personal-account__sidebar-link btn button-border">
+                                        <img src="images/cabinet-icon5.svg" width="14" height="18" alt="">
+                                        Проплатити кредит
+                                    </a>
+                                </li>
+                                <li class="personal-account__sidebar-item">
+                                    <a href="сhange-password.html"
+                                        class="personal-account__sidebar-link btn button-border">
+                                        <img src="images/cabinet-icon6.svg" width="14" height="18" alt="">
+                                        Змінити пароль
+                                    </a>
+                                </li>
+                                <li class="personal-account__sidebar-item">
+                                    <a href="/" class="personal-account__sidebar-link btn button-red">
+                                        <img src="images/arrow-left.svg" alt="">
+                                        Вихiд</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="personal-account__main">
+                    <div class="personal-account__main-header">
+                        <h2>Мої дані</h2>
+                    </div>
+
+                    <form class="personal-account__full-info">
+                        <div class="personal-account__form-card">
+                            <div class="personal-account__form-card-content">
+                                <h3>Персональні дані</h3>
+                                <div class="personal-account__form-card-col">
+                                    <div class="personal-account__save-cards">
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="lastName">Прізвище</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="lastName" class="form__input"
+                                                    placeholder="Ващенко" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="fullName">Дівоче прізвище</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="fullName" placeholder="Ващенко"
+                                                    class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="name">Ім’я</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="name" placeholder="Володимир" class="form__input"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="forName">По-батькові</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="forName" placeholder="Михайлович"
+                                                    class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full-width">
+                                            <label for="date">Дата народження</label>
+                                            <div class="personal-account__text personal-account__text--date">
+                                                <input type="date" id="date" class="form__input" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-account__form-card">
+                            <div class="personal-account__form-card-content">
+                                <h3>Контактна інформація</h3>
+                                <div class="personal-account__form-card-col">
+                                    <div class="personal-account__save-cards">
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="phone">Номер телефону</label>
+                                            <div class="personal-account__text">
+                                                <input type="tel" id="phone" class="form__input"
+                                                    placeholder="+38 (098) 905 63 61" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="email">Email</label>
+                                            <div class="personal-account__text">
+                                                <input type="email" id="email" placeholder="cmo.multicredit@gmail.com"
+                                                    class="form__input" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-account__form-card">
+                            <div class="personal-account__form-card-content">
+                                <h3>Паспортні дані</h3>
+                                <div class="personal-account__form-card-col">
+                                    <div class="form__checkbox-group form__checkbox-group--radio">
+                                        <label class="form__checkbox-label">
+                                            <input type="radio" id="radioDok" name="document" class="form__checkbox"
+                                                checked>
+                                            <span>Паспорт</span>
+                                        </label>
+                                        <label class="form__checkbox-label">
+                                            <input type="radio" id="radioDok2" name="document" class="form__checkbox">
+                                            <span>ID-картка</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="document active" id="document1">
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="passportSeries" class="form__label">Серія</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="passportSeries" class="form__input"
+                                                    placeholder="СМ" maxlength="10" style="text-transform: uppercase;"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="passportNumber" class="form__label">Номер</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="passportNumber" class="form__input"
+                                                    placeholder="778856" maxlength="6" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="whenIssued" class="form__label">Коли виданий</label>
+                                            <div class="personal-account__text personal-account__text--date">
+                                                <input type="date" id="whenIssued" class="form__input"
+                                                    placeholder="Встановіть дату" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="issuedBy" class="form__label">Ким виданий</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="issuedBy"
+                                                    placeholder="Голосіївським РУ ГУМВС Укр" class="form__input"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="document" id="document2">
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="passportIDnumber" class="form__label">Номер ID паспорту</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="passportIDnumber" class="form__input"
+                                                    maxlength="10" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="termOfValidity" class="form__label">Строк дії</label>
+                                            <div class="personal-account__text personal-account__text--date">
+                                                <input type="date" id="termOfValidity" class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full-width">
+                                            <label for="IDissuingAuthority" class="form__label">Орган видачі ID</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="IDissuingAuthority" class="form__input" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-account__form-card">
+                            <div class="personal-account__form-card-content">
+                                <h3>Ідентифікаційні дані</h3>
+                                <div class="personal-account__form-card-col">
+                                    <div class="form__checkbox-group form__checkbox-group--radio">
+                                        <label class="form__checkbox-label">
+                                            <input type="radio" id="radioDok3" name="indifacation"
+                                                class="form__checkbox" checked>
+                                            <span>Паспорт</span>
+                                        </label>
+                                        <label class="form__checkbox-label">
+                                            <input type="radio" id="radioDok4" name="indifacation"
+                                                class="form__checkbox">
+                                            <span>ID-картка</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="documents active" id="document3">
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipn" class="form__label">ІПН (Ідентифікаційний код):</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="ipn" class="form__input" placeholder="3270713495"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipnNumber" class="form__label">Номер ID</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="ipnNumber" class="form__input"
+                                                    placeholder="778856" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipnDate" class="form__label">Строк дії</label>
+                                            <div class="personal-account__text personal-account__text--date">
+                                                <input type="date" id="ipnDate" class="form__input"
+                                                    placeholder="Встановіть дату" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipnAddres" class="form__label">Орган видачі ID</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="ipnAddres"
+                                                    placeholder="Голосіївським РУ ГУМВС Укр" class="form__input"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="documents" id="document4">
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipn2" class="form__label">ІПН (Ідентифікаційний код):</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="ipn2" class="form__input"
+                                                    placeholder="3270713495" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipnNumber2" class="form__label">Номер ID</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="ipnNumber2" class="form__input"
+                                                    placeholder="778856" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipnDate2" class="form__label">Строк дії</label>
+                                            <div class="personal-account__text personal-account__text--date">
+                                                <input type="date" id="ipnDate2" class="form__input"
+                                                    placeholder="Встановіть дату" required>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="personal-account__save-cards--label personal-account__save-cards--label--full">
+                                            <label for="ipnAddres2" class="form__label">Орган видачі ID</label>
+                                            <div class="personal-account__text">
+                                                <input type="text" id="ipnAddres2"
+                                                    placeholder="Голосіївським РУ ГУМВС Укр" class="form__input"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-account__form-card personal-account__form-card-paddings">
+                            <div class="personal-account__form-card-content">
+                                <h3>Зміна поточного паролю</h3>
+                                <div class="personal-account__form-card-col">
+                                    <div class="personal-account__save-cards">
+                                        <div class="personal-account__save-cards--label personal-account__save-cards--label--full personal-account__save-cards--label--file">
+                                            <label for="file1">Перша сторінка паспорта</label>
+                                            <div class="personal-account__text">
+                                                <input type="file" id="file1" class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div class="personal-account__save-cards--label personal-account__save-cards--label--full personal-account__save-cards--label--file">
+                                            <label for="file2">Друга сторінка паспорта</label>
+                                            <div class="personal-account__text">
+                                                <input type="file" id="file2" class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div class="personal-account__save-cards--label personal-account__save-cards--label--full personal-account__save-cards--label--file">
+                                            <label for="file3">Треття сторінка паспорта</label>
+                                            <div class="personal-account__text">
+                                                <input type="file" id="file3" class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div class="personal-account__save-cards--label personal-account__save-cards--label--full personal-account__save-cards--label--file">
+                                            <label for="file4">Четверта сторінка паспорта</label>
+                                            <div class="personal-account__text">
+                                                <input type="file" id="file4" class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div class="personal-account__save-cards--label personal-account__save-cards--label--full personal-account__save-cards--label--file">
+                                            <label for="file5">Селфі з паспортом</label>
+                                            <div class="personal-account__text">
+                                                <input type="file" id="file5" class="form__input" required>
+                                            </div>
+                                        </div>
+                                        <div class="personal-account__save-cards--label personal-account__save-cards--label--full personal-account__save-cards--label--file">
+                                            <label for="file6">Скан ІПН (Ідентифікаційний код)</label>
+                                            <div class="personal-account__text">
+                                                <input type="file" id="file6" class="form__input" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__actions">
+                                        <a href="/" class="form__sign-in btn-primary btn button-red">
+                                            <img src="images/close-white.svg" alt="">
+                                            Скинути </a>
+                                        <button type="submit" class="form__submit btn button-border">Завантажити
+                                            <img src="images/download.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer footer-registration">
@@ -313,10 +696,10 @@
 
 
 
-<script src="script/jquery-3.7.0.min.js"></script>
-<script src="script/jquery.maskedinput.js"></script>
-<script src="script/swiper-bundle.min.js"></script>
-<script src="script/main.js"></script>
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/jquery.maskedinput.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
