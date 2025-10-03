@@ -613,3 +613,503 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 $('input[type="tel"]').mask('+38(999) 999-99-99');
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSwitcher();
+});
+
+function initSwitcher() {
+  const switchButtons = document.querySelectorAll(".theme-toggle");
+  const hero1Elements = document.querySelectorAll(".hero1");
+  const hero2Elements = document.querySelectorAll(".hero2");
+  const toggleTexts = document.querySelectorAll(".togle-text");
+  const savedState = localStorage.getItem("heroState1"); // Уникальный ключ
+  
+  if (hero1Elements.length === 0 || hero2Elements.length === 0 || switchButtons.length === 0) {
+    return;
+  }
+  
+  let isShowingHero1 = savedState !== "second";
+  
+  function updateTextStates() {
+    toggleTexts.forEach(textElement => {
+      const text = textElement.textContent.trim();
+      textElement.classList.remove("active");
+      
+      if ((text === "Hydria Perform" && isShowingHero1) || 
+          (text === "Hydria Daily" && !isShowingHero1)) {
+        textElement.classList.add("active");
+      }
+    });
+  }
+  
+  function showHero1() {
+    hero1Elements.forEach(el => {
+      el.style.display = "block";
+    });
+    hero2Elements.forEach(el => {
+      el.style.display = "none";
+    });
+    isShowingHero1 = true;
+    updateTextStates();
+  }
+  
+  function showHero2() {
+    hero1Elements.forEach(el => {
+      el.style.display = "none";
+    });
+    hero2Elements.forEach(el => {
+      el.style.display = "block";
+    });
+    isShowingHero1 = false;
+    updateTextStates();
+  }
+  
+  function toggleHero() {
+    if (isShowingHero1) {
+      showHero2();
+      localStorage.setItem("heroState1", "second"); // Уникальный ключ
+    } else {
+      showHero1();
+      localStorage.setItem("heroState1", "first"); // Уникальный ключ
+    }
+  }
+  
+  function switchToHero(targetHero) {
+    if (targetHero === "hero1" && !isShowingHero1) {
+      showHero1();
+      localStorage.setItem("heroState1", "first"); // Уникальный ключ
+    } else if (targetHero === "hero2" && isShowingHero1) {
+      showHero2();
+      localStorage.setItem("heroState1", "second"); // Уникальный ключ
+    }
+  }
+  
+  if (savedState === "second") {
+    showHero2();
+  } else {
+    showHero1();
+  }
+  
+  switchButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleHero();
+    });
+  });
+  
+  toggleTexts.forEach(textElement => {
+    textElement.addEventListener("click", (event) => {
+      event.preventDefault();
+      const text = textElement.textContent.trim();
+      
+      if (text === "Hydria Perform") {
+        switchToHero("hero1");
+      } else if (text === "Hydria Daily") {
+        switchToHero("hero2");
+      }
+    });
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 768) {
+    initSwitcher2();
+  }
+});
+
+function initSwitcher2() {
+  const switchButtons2 = document.querySelectorAll(".theme-toggle2");
+  const hero1Elements2 = document.querySelectorAll(".hero3");
+  const hero2Elements2 = document.querySelectorAll(".hero4");
+  const toggleTexts2 = document.querySelectorAll(".togle-text2");
+  const savedState2 = localStorage.getItem("heroState2"); // Уникальный ключ
+  
+  if (hero1Elements2.length === 0 || hero2Elements2.length === 0 || switchButtons2.length === 0) {
+    return;
+  }
+  
+  let isShowingHero1 = savedState2 !== "second";
+  
+  function updateTextStates() {
+    toggleTexts2.forEach(textElement => {
+      const text = textElement.textContent.trim();
+      textElement.classList.remove("active");
+      
+      if ((text === "Hydria Perform" && isShowingHero1) || 
+          (text === "Hydria Daily" && !isShowingHero1)) {
+        textElement.classList.add("active");
+      }
+    });
+  }
+  
+  function showHero1() {
+    hero1Elements2.forEach(el => {
+      el.style.display = "block";
+    });
+    hero2Elements2.forEach(el => {
+      el.style.display = "none";
+    });
+    isShowingHero1 = true;
+    updateTextStates();
+  }
+  
+  function showHero2() {
+    hero1Elements2.forEach(el => {
+      el.style.display = "none";
+    });
+    hero2Elements2.forEach(el => {
+      el.style.display = "block";
+    });
+    isShowingHero1 = false;
+    updateTextStates();
+  }
+  
+  function toggleHero() {
+    if (isShowingHero1) {
+      showHero2();
+      localStorage.setItem("heroState2", "second"); // Уникальный ключ
+    } else {
+      showHero1();
+      localStorage.setItem("heroState2", "first"); // Уникальный ключ
+    }
+  }
+  
+  function switchToHero(targetHero) {
+    if (targetHero === "hero3" && !isShowingHero1) {
+      showHero1();
+      localStorage.setItem("heroState2", "first"); // Уникальный ключ
+    } else if (targetHero === "hero4" && isShowingHero1) {
+      showHero2();
+      localStorage.setItem("heroState2", "second"); // Уникальный ключ
+    }
+  }
+  
+  if (savedState2 === "second") {
+    showHero2();
+  } else {
+    showHero1();
+  }
+  
+  switchButtons2.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleHero();
+    });
+  });
+  
+  toggleTexts2.forEach(textElement => {
+    textElement.addEventListener("click", (event) => {
+      event.preventDefault();
+      const text = textElement.textContent.trim();
+      
+      if (text === "Hydria Perform") {
+        switchToHero("hero3");
+      } else if (text === "Hydria Daily") {
+        switchToHero("hero4");
+      }
+    });
+  });
+}
+
+	
+	
+	document.addEventListener("DOMContentLoaded", () => {
+		 if (window.innerWidth <= 768) {
+     initSecondSwitcher();
+
+  }
+});
+
+function initSecondSwitcher() {
+  const switchButtons = document.querySelectorAll(".mode-toggle");
+  const section1Elements = document.querySelectorAll(".section1");
+  const section2Elements = document.querySelectorAll(".section2");
+  const toggleLabels = document.querySelectorAll(".toggle-label");
+  const savedMode = localStorage.getItem("sectionState"); // Уникальный ключ
+  
+  if (section1Elements.length === 0 || section2Elements.length === 0 || switchButtons.length === 0) {
+    return;
+  }
+  
+  let isShowingSection1 = savedMode !== "second";
+  
+  function updateLabelStates() {
+    toggleLabels.forEach(labelElement => {
+      const text = labelElement.textContent.trim();
+      labelElement.classList.remove("active");
+      
+      if ((text === "Hydria Perform" && isShowingSection1) || 
+          (text === "Hydria Daily" && !isShowingSection1)) {
+        labelElement.classList.add("active");
+      }
+    });
+  }
+  
+  function showSection1() {
+    section1Elements.forEach(el => {
+      el.style.display = "block";
+    });
+    section2Elements.forEach(el => {
+      el.style.display = "none";
+    });
+    isShowingSection1 = true;
+    updateLabelStates();
+  }
+  
+  function showSection2() {
+    section1Elements.forEach(el => {
+      el.style.display = "none";
+    });
+    section2Elements.forEach(el => {
+      el.style.display = "block";
+    });
+    isShowingSection1 = false;
+    updateLabelStates();
+  }
+  
+  function toggleSection() {
+    if (isShowingSection1) {
+      showSection2();
+      localStorage.setItem("sectionState", "second"); // Уникальный ключ
+    } else {
+      showSection1();
+      localStorage.setItem("sectionState", "first"); // Уникальный ключ
+    }
+  }
+  
+  function switchToSection(targetSection) {
+    if (targetSection === "section1" && !isShowingSection1) {
+      showSection1();
+      localStorage.setItem("sectionState", "first"); // Уникальный ключ
+    } else if (targetSection === "section2" && isShowingSection1) {
+      showSection2();
+      localStorage.setItem("sectionState", "second"); // Уникальный ключ
+    }
+  }
+  
+  if (savedMode === "second") {
+    showSection2();
+  } else {
+    showSection1();
+  }
+  
+  switchButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleSection();
+    });
+  });
+  
+  toggleLabels.forEach(labelElement => {
+    labelElement.addEventListener("click", (event) => {
+      event.preventDefault();
+      const text = labelElement.textContent.trim();
+      
+      if (text === "Hydria Perform") {
+        switchToSection("section1");
+      } else if (text === "Hydria Daily") {
+        switchToSection("section2");
+      }
+    });
+  });
+}
+
+
+// Простой и надежный скрипт для перезагрузки слайдеров при переключении блоков
+document.addEventListener("DOMContentLoaded", () => {
+  initSwiperReloader();
+});
+
+function initSwiperReloader() {
+  
+  // Функция для полной перезагрузки всех видимых слайдеров
+  function reloadVisibleSwipers() {
+    setTimeout(() => {
+      // Находим все слайдеры
+      const allSwipers = document.querySelectorAll('.swiper');
+      
+      allSwipers.forEach(swiperEl => {
+        // Проверяем видимость элемента
+        const isVisible = swiperEl.offsetParent !== null;
+        
+        if (isVisible && swiperEl.swiper) {
+          const swiperInstance = swiperEl.swiper;
+          const originalSettings = swiperInstance.params;
+          
+          // Уничтожаем старый инстанс
+          swiperInstance.destroy(true, true);
+          
+          // Создаем новый инстанс с теми же настройками
+          setTimeout(() => {
+            new Swiper(swiperEl, originalSettings);
+          }, 50);
+        }
+      });
+    }, 200); // Даем время на переключение блоков
+  }
+
+  // Более агрессивный подход - слушаем все возможные события
+  const switchSelectors = [
+    '.theme-toggle',
+    '.theme-toggle2', 
+    '.togle-text',
+    '.togle-text2'
+  ];
+
+  // Обработчик клика
+  const handleClick = (event) => {
+    const target = event.target;
+    
+    // Проверяем, что клик был по переключателю
+    const isSwitch = switchSelectors.some(selector => 
+      target.matches(selector) || target.closest(selector)
+    );
+    
+    if (isSwitch) {
+      console.log('Переключатель нажат, перезагружаем слайдеры...');
+      reloadVisibleSwipers();
+    }
+  };
+
+  // Добавляем слушатель на весь document
+  document.addEventListener('click', handleClick, true);
+
+  // Дополнительно - прямое подключение к элементам
+  switchSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(element => {
+      element.addEventListener('click', () => {
+        console.log('Прямой клик по переключателю, перезагружаем...');
+        reloadVisibleSwipers();
+      });
+    });
+  });
+
+  // Отслеживаем изменения в localStorage как дополнительный триггер
+  const originalSetItem = localStorage.setItem;
+  localStorage.setItem = function(key, value) {
+    originalSetItem.apply(this, arguments);
+    
+    if (key === 'heroState1' || key === 'heroState2') {
+      console.log('LocalStorage изменен, перезагружаем слайдеры...');
+      reloadVisibleSwipers();
+    }
+  };
+
+  // Наблюдаем за изменениями display стилей hero блоков
+  const observer = new MutationObserver((mutations) => {
+    let shouldReload = false;
+    
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+        const target = mutation.target;
+        
+        if (target.classList.contains('hero1') || 
+            target.classList.contains('hero2') || 
+            target.classList.contains('hero3') || 
+            target.classList.contains('hero4')) {
+          shouldReload = true;
+        }
+      }
+    });
+    
+    if (shouldReload) {
+      console.log('Hero блок изменился, перезагружаем слайдеры...');
+      reloadVisibleSwipers();
+    }
+  });
+
+  // Подключаем observer ко всем hero блокам
+  const heroBlocks = document.querySelectorAll('.hero1, .hero2, .hero3, .hero4');
+  heroBlocks.forEach(block => {
+    observer.observe(block, {
+      attributes: true,
+      attributeFilter: ['style']
+    });
+  });
+
+  console.log('Swiper Reloader инициализирован');
+}
+
+// Глобальная функция для ручной перезагрузки
+window.reloadSwipers = function() {
+  console.log('Ручная перезагрузка слайдеров...');
+  
+  setTimeout(() => {
+    const visibleSwipers = document.querySelectorAll('.swiper');
+    
+    visibleSwipers.forEach(swiperEl => {
+      if (swiperEl.offsetParent !== null && swiperEl.swiper) {
+        const swiperInstance = swiperEl.swiper;
+        const originalSettings = swiperInstance.params;
+        
+        swiperInstance.destroy(true, true);
+        
+        setTimeout(() => {
+          new Swiper(swiperEl, originalSettings);
+        }, 50);
+      }
+    });
+  }, 100);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
