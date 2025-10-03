@@ -90,7 +90,7 @@ body {
 input,
 textarea,
 .form__input {
-    min-height: 52px;
+    height: 52px;
     width: 100%;
     padding: 12px;
     transition: all 0.3s ease;
@@ -138,6 +138,20 @@ label {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
+}
+
+select.form__input {
+     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Добавляем свою стрелку */
+    background-image: url(../images/select-unput.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center; /* позиция - 20px от правого края */
+    background-size: 16px;
+    
+    padding-right: 45px; /* место для стрелки */
 }
 
 .form__box-label {

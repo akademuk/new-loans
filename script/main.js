@@ -576,3 +576,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+$('input[type="tel"]').mask('+38(999) 999-99-99');

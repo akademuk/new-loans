@@ -261,7 +261,7 @@
                                     <div class="document active" id="document1">
                                         <div class="form__box-label">
                                             <label for="passportSeries" class="form__label">Серія паспорту</label>
-                                            <input type="text" id="passportSeries" class="form__input" maxlength="10"
+                                            <input type="text" id="passportSeries" class="form__input" maxlength="10" style="text-transform: uppercase;"
                                                 required>
                                             <span>В полі можуть бути записані символи тільки кирилицею, всі символи
                                                 мають бути верхньому регістрі, має бути не більше двох символів</span>
@@ -269,7 +269,7 @@
 
                                         <div class="form__box-label">
                                             <label for="passportNumber" class="form__label">Номер паспорту</label>
-                                            <input type="text" id="passportNumber" class="form__input" required>
+                                            <input type="text" id="passportNumber" class="form__input" maxlength="6" required>
                                             <span>В полі може бути тільки цифри, має бути не більше і не менше 6
                                                 цифр</span>
                                         </div>
@@ -299,9 +299,8 @@
                                         </div>
 
                                         <div class="form__box-label">
-                                            <label for="company" class="form__label">Компанія</label>
-                                            <input type="text" id="company" class="form__input"
-                                                placeholder="Введіть повну назву компаії в якій ви працюєте" required>
+                                            <label for="company1" class="form__label">Компанія</label>
+                                            <textarea id="company1" class="form__input" placeholder="Введіть повну назву компанії в якій ви працюєте" style="height: auto; min-height: auto;"></textarea>
                                         </div>
 
                                         <div class="form__actions">
@@ -346,8 +345,7 @@
 
                                         <div class="form__box-label">
                                             <label for="company2" class="form__label">Компанія</label>
-                                            <input type="text" id="company2" class="form__input"
-                                                placeholder="Введіть повну назву компанії в якій ви працюєте" required>
+                                            <textarea id="company2" class="form__input" placeholder="Введіть повну назву компанії в якій ви працюєте" style="height: auto; min-height: auto;"></textarea>
                                         </div>
 
                                         <div class="form__actions">
@@ -472,6 +470,7 @@
 </body>
 
 <script src="script/jquery-3.7.0.min.js"></script>
+<script src="script/jquery.maskedinput.js"></script>
 <script src="script/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
 
