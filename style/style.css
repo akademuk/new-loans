@@ -726,7 +726,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1px;
+    gap: 4px;
     align-self: stretch;
 }
 
@@ -5236,7 +5236,7 @@ details[open] .footer__warning-button::after {
     .credit-box__content {
         padding: 32px;
         border-radius: 8px;
-        background: #F9FAFB;
+        background: #fff;
         gap: 0;
     }
 
@@ -5874,4 +5874,80 @@ body.no-scroll {
     overflow: auto;
     width: 100%;
     padding-right: 4px;
+}
+
+
+input[type="range"]{
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 8px;
+}
+input[type="range"]::-moz-track{
+    -moz-appearance: none;
+    height: 8px;
+}
+input[type="range"]::-ms-track{
+    appearance: none;
+    height: 8px;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: url(../images/range.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: -5px;
+}
+input[type="range"]::-moz-range-thumb{
+    -webkit-appearance: none;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    background: url(../img/cursor.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: -18px;
+    border: 0 !important;
+    box-shadow: inset;
+}
+input[type="range"]::-ms-thumb{
+    -webkit-appearance: none;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    background: url(../img/cursor.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: -18px;
+    border: 0 !important;
+    box-shadow: inset;
+}
+
+input[type="range"]:hover {
+    border: none;
+}
+
+input[type="range"]:active {
+    border: none;
+}
+
+input[type="range"]:focus {
+    border: none;
 }

@@ -131,14 +131,16 @@ function initCreditRanges() {
     };
   };
 
-  const updateRangeBackground = (el) => {
+const updateRangeBackground = (el) => {
     const min = parseInt(el.min) || 0;
     const max = parseInt(el.max) || 100;
-    const val = parseInt(el.value);
-    const percent = ((val - min) * 100) / (max - min);
-    
-    el.style.setProperty('background', `linear-gradient(to right, #ff6f00 ${percent}%, #F5F5F5 ${percent}%)`, 'important');
-  };
+    const val = parseInt(el.value) || min;
+    const percent = Math.max(0, Math.min(100, ((val - min) * 100) / (max - min)));
+
+    // Обновите градиент, чтобы он был по центру
+    el.style.setProperty('background', `linear-gradient(to right, #FD382A ${percent}%, #F9FAFB ${percent}%)`, 'important');
+};
+
 
   const inputField = document.querySelector('.credit-form__amount');
   let inputListenersAdded = false;
@@ -184,6 +186,7 @@ function initCreditRanges() {
     range.addEventListener("input", throttledUpdate, { passive: true });
   });
 }
+
 
 // Инициализация переключения табов в форме заявки
 function initTabSwitching() {
