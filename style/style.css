@@ -5909,6 +5909,7 @@ input[type="range"]::-webkit-slider-thumb{
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+     border-radius: 50%;
     margin-top: -5px;
 }
 input[type="range"]::-moz-range-thumb{
@@ -5917,8 +5918,9 @@ input[type="range"]::-moz-range-thumb{
     width: 50px;
     background-color: transparent;
     border-radius: 50%;
-    background: url(../img/cursor.svg);
+    background: url(../images/range.svg);
     background-repeat: no-repeat;
+     border-radius: 50%;
     background-size: cover;
     cursor: pointer;
     margin-top: -18px;
@@ -5931,7 +5933,7 @@ input[type="range"]::-ms-thumb{
     width: 50px;
     background-color: transparent;
     border-radius: 50%;
-    background: url(../img/cursor.svg);
+    background: url(../images/range.svg);
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
