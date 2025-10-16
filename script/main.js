@@ -1116,3 +1116,534 @@ window.reloadSwipers = function() {
 
 
 
+<script>
+/**
+ * Модуль управления переключателями и Swiper слайдерами
+ * Обеспечивает плавное переключение между различными блоками контента
+ */
+
+class SwitcherManager {
+  constructor() {
+    this.state = {
+      heroState1: 'first',
+      heroState2: 'first', 
+      sectionState: 'first'
+    };
+    
+    this.configs = {
+      switcher1: {
+        buttonSelector: '.theme-toggle',
+        firstSelector: '.hero1',
+        secondSelector: '.hero2',
+        textSelector: '.togle-text',
+        stateKey: 'heroState1',
+        labels: ['Hydria Perform', 'Hydria Daily']
+      },
+      switcher2: {
+        buttonSelector: '.theme-toggle2',
+        firstSelector: '.hero3',
+        secondSelector: '.hero4',
+        textSelector: '.togle-text2',
+        stateKey: 'heroState2',
+        labels: ['Hydria Perform', 'Hydria Daily']
+      },
+      switcher3: {
+        buttonSelector: '.mode-toggle',
+        firstSelector: '.section1',
+        secondSelector: '.section2',
+        textSelector: '.toggle-label',
+        stateKey: 'sectionState',
+        labels: ['Hydria Perform', 'Hydria Daily']
+      }
+    };
+    
+    this.switchers = new Map();
+    this.isInitialized = false;
+  }
+
+  /**
+   * Определяет начальное состояние на основе URL
+   */
+  detectPageState() {
+    const url = window.location.href;
+    const defaultState = url.includes('/daily/') ? 'second' : 'first';
+    
+    Object.keys(this.state).forEach(key => {
+      this.state[key] = defaultState;
+    });
+  }
+
+  /**
+   * Инициализация всех переключателей
+   */
+  init() {
+    if (this.isInitialized) {
+      this.destroy();
+    }
+
+    this.detectPageState();
+    
+    // Основной переключатель - всегда активен
+    this.createSwitcher('switcher1');
+    
+    // Дополнительные переключатели только для мобильных устройств
+    if (window.innerWidth <= 768) {
+      this.createSwitcher('switcher2');
+      this.createSwitcher('switcher3');
+    }
+    
+    this.isInitialized = true;
+  }
+
+  /**
+   * Создает новый переключатель
+   */
+  createSwitcher(configKey) {
+    const config = this.configs[configKey];
+    if (!config) return;
+
+    const switcher = new Switcher(config, this.state);
+    if (switcher.isValid()) {
+      this.switchers.set(configKey, switcher);
+    }
+  }
+
+  /**
+   * Уничтожает все переключатели
+   */
+  destroy() {
+    this.switchers.forEach(switcher => switcher.destroy());
+    this.switchers.clear();
+    this.isInitialized = false;
+  }
+}
+
+class Switcher {
+  constructor(config, state) {
+    this.config = config;
+    this.state = state;
+    this.isToggling = false;
+    this.eventListeners = [];
+    
+    this.elements = {
+      buttons: document.querySelectorAll(config.buttonSelector),
+      firstElements: document.querySelectorAll(config.firstSelector),
+      secondElements: document.querySelectorAll(config.secondSelector),
+      textElements: document.querySelectorAll(config.textSelector)
+    };
+    
+    if (this.isValid()) {
+      this.init();
+    }
+  }
+
+  /**
+   * Проверяет валидность элементов
+   */
+  isValid() {
+    const { firstElements, secondElements, buttons } = this.elements;
+    return firstElements.length > 0 && secondElements.length > 0 && buttons.length > 0;
+  }
+
+  /**
+   * Определяет начальное состояние на основе активных классов в DOM
+   */
+  detectInitialState() {
+    const { textElements } = this.elements;
+    
+    // Ищем элемент с классом active
+    const activeElement = Array.from(textElements).find(el => el.classList.contains('active'));
+    
+    if (activeElement) {
+      const activeText = activeElement.textContent?.trim();
+      
+      // Если активен "Hydria Perform" - показываем первый блок
+      if (activeText === this.config.labels[0]) {
+        this.state[this.config.stateKey] = 'first';
+      }
+      // Если активен "Hydria Daily" - показываем второй блок  
+      else if (activeText === this.config.labels[1]) {
+        this.state[this.config.stateKey] = 'second';
+      }
+    }
+  }
+
+  /**
+   * Геттер для текущего состояния
+   */
+  get isShowingFirst() {
+    return this.state[this.config.stateKey] === 'first';
+  }
+
+  /**
+   * Сеттер для текущего состояния
+   */
+  set isShowingFirst(value) {
+    this.state[this.config.stateKey] = value ? 'first' : 'second';
+  }
+
+  /**
+   * Обновляет состояние кнопки переключателя
+   */
+  updateButtonState() {
+    const { buttons } = this.elements;
+    
+    buttons.forEach(btn => {
+      // Переключаем класс active в зависимости от состояния
+      if (!this.isShowingFirst) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+      
+      // Обновляем aria-pressed для доступности
+      btn.setAttribute('aria-pressed', (!this.isShowingFirst).toString());
+      
+      // Если кнопка имеет внутренний элемент переключения
+      const innerElements = btn.querySelectorAll('.toggle-circle, .switch-handle, .slider, .toggle-inner');
+      innerElements.forEach(element => {
+        if (!this.isShowingFirst) {
+          element.classList.add('active');
+        } else {
+          element.classList.remove('active');
+        }
+      });
+    });
+  }
+
+  /**
+   * Обновляет состояние текстовых элементов
+   */
+  updateTextState() {
+    const { textElements } = this.elements;
+    
+    textElements.forEach(el => {
+      const text = el.textContent?.trim();
+      
+      // Удаляем все активные классы
+      el.classList.remove('active');
+      
+      // Добавляем active только нужному элементу
+      if ((text === this.config.labels[0] && this.isShowingFirst) || 
+          (text === this.config.labels[1] && !this.isShowingFirst)) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  /**
+   * Обновляет все состояния UI
+   */
+  updateUIState() {
+    this.updateButtonState();
+    this.updateTextState();
+  }
+
+  /**
+   * Показывает указанные элементы и скрывает другие
+   */
+  showElements(elementsToShow, elementsToHide) {
+    return new Promise((resolve) => {
+      requestAnimationFrame(() => {
+        elementsToShow.forEach(el => {
+          el.style.display = 'block';
+        });
+        
+        if (elementsToHide) {
+          elementsToHide.forEach(el => {
+            el.style.display = 'none';
+          });
+        }
+        
+        // Обновляем UI состояние после изменения видимости
+        requestAnimationFrame(() => {
+          this.updateUIState();
+          resolve();
+        });
+      });
+    });
+  }
+
+  /**
+   * Показывает первый блок
+   */
+  async showFirst(silent = false) {
+    const { firstElements, secondElements } = this.elements;
+    await this.showElements(firstElements, secondElements);
+    this.isShowingFirst = true;
+    if (!silent) {
+      this.triggerSwiperReload();
+    }
+  }
+
+  /**
+   * Показывает второй блок
+   */
+  async showSecond(silent = false) {
+    const { firstElements, secondElements } = this.elements;
+    await this.showElements(secondElements, firstElements);
+    this.isShowingFirst = false;
+    if (!silent) {
+      this.triggerSwiperReload();
+    }
+  }
+
+  /**
+   * Переключает между блоками
+   */
+  async toggle() {
+    if (this.isToggling) return;
+    
+    this.isToggling = true;
+    
+    try {
+      if (this.isShowingFirst) {
+        await this.showSecond();
+      } else {
+        await this.showFirst();
+      }
+    } finally {
+      setTimeout(() => {
+        this.isToggling = false;
+      }, 300);
+    }
+  }
+
+  /**
+   * Переключает на указанный блок
+   */
+  async switchTo(target) {
+    if (this.isToggling) return;
+    
+    this.isToggling = true;
+    
+    try {
+      const shouldShowFirst = target === 'first' || 
+                             target === this.config.firstSelector.slice(1);
+      
+      if (shouldShowFirst && !this.isShowingFirst) {
+        await this.showFirst();
+      } else if (!shouldShowFirst && this.isShowingFirst) {
+        await this.showSecond();
+      }
+    } finally {
+      setTimeout(() => {
+        this.isToggling = false;
+      }, 300);
+    }
+  }
+
+  /**
+   * Запускает перезагрузку Swiper слайдеров
+   */
+  triggerSwiperReload() {
+    if (window.swiperReloader) {
+      setTimeout(() => window.swiperReloader.reload(), 250);
+    }
+  }
+
+  /**
+   * Добавляет обработчик события с отслеживанием
+   */
+  addEventListener(element, event, handler) {
+    element.addEventListener(event, handler);
+    this.eventListeners.push({ element, event, handler });
+  }
+
+  /**
+   * Инициализация переключателя
+   */
+  init() {
+    // Сначала определяем начальное состояние на основе DOM
+    this.detectInitialState();
+    
+    // Устанавливаем начальное состояние контента без анимации
+    const silent = true;
+    if (this.isShowingFirst) {
+      this.showFirst(silent);
+    } else {
+      this.showSecond(silent);
+    }
+
+    // Принудительно обновляем UI состояние
+    setTimeout(() => {
+      this.updateUIState();
+    }, 50);
+
+    // Обработчики для кнопок переключения
+    this.elements.buttons.forEach(btn => {
+      this.addEventListener(btn, 'click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggle();
+      });
+    });
+
+    // Обработчики для текстовых элементов
+    this.elements.textElements.forEach(el => {
+      this.addEventListener(el, 'click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const text = el.textContent?.trim();
+        
+        if (text === this.config.labels[0]) {
+          this.switchTo('first');
+        } else if (text === this.config.labels[1]) {
+          this.switchTo('second');
+        }
+      });
+    });
+  }
+
+  /**
+   * Уничтожает переключатель и удаляет обработчики
+   */
+  destroy() {
+    this.eventListeners.forEach(({ element, event, handler }) => {
+      element.removeEventListener(event, handler);
+    });
+    this.eventListeners = [];
+  }
+}
+
+class SwiperReloader {
+  constructor() {
+    this.reloadTimeout = null;
+    this.observers = new Map();
+  }
+
+  /**
+   * Перезагружает видимые Swiper слайдеры
+   */
+  reloadVisibleSwipers() {
+    const swipers = document.querySelectorAll('.swiper');
+    
+    swipers.forEach(swiperEl => {
+      if (!this.isElementVisible(swiperEl) || !swiperEl.swiper) return;
+      
+      const instance = swiperEl.swiper;
+      const settings = { ...instance.params };
+      
+      instance.destroy(true, true);
+      
+      setTimeout(() => {
+        try {
+          new Swiper(swiperEl, settings);
+        } catch (error) {
+          console.warn('Ошибка при перезагрузке Swiper:', error);
+        }
+      }, 50);
+    });
+  }
+
+  /**
+   * Проверяет видимость элемента
+   */
+  isElementVisible(element) {
+    return element.offsetParent !== null && 
+           getComputedStyle(element).display !== 'none';
+  }
+
+  /**
+   * Перезагружает слайдеры с дебаунсом
+   */
+  reload() {
+    clearTimeout(this.reloadTimeout);
+    this.reloadTimeout = setTimeout(() => {
+      this.reloadVisibleSwipers();
+    }, 100);
+  }
+
+  /**
+   * Настраивает наблюдатели за изменениями
+   */
+  setupObservers() {
+    const heroBlocks = document.querySelectorAll(
+      '.hero1, .hero2, .hero3, .hero4, .section1, .section2'
+    );
+    
+    if (heroBlocks.length === 0) return;
+    
+    const observer = new MutationObserver((mutations) => {
+      const hasStyleChange = mutations.some(mutation => 
+        mutation.type === 'attributes' && 
+        mutation.attributeName === 'style'
+      );
+      
+      if (hasStyleChange) {
+        this.reload();
+      }
+    });
+
+    heroBlocks.forEach(block => {
+      observer.observe(block, {
+        attributes: true,
+        attributeFilter: ['style']
+      });
+    });
+    
+    this.observers.set('main', observer);
+  }
+
+  /**
+   * Инициализация
+   */
+  init() {
+    this.setupObservers();
+    
+    // Принудительная перезагрузка после инициализации
+    setTimeout(() => {
+      this.reload();
+    }, 300);
+  }
+
+  /**
+   * Уничтожает наблюдатели
+   */
+  destroy() {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers.clear();
+    clearTimeout(this.reloadTimeout);
+  }
+}
+
+// Инициализация приложения
+class App {
+  constructor() {
+    this.switcherManager = new SwitcherManager();
+    this.swiperReloader = new SwiperReloader();
+    this.resizeTimeout = null;
+    
+    // Делаем swiperReloader доступным глобально
+    window.swiperReloader = this.swiperReloader;
+    window.reloadSwipers = () => this.swiperReloader.reload();
+  }
+
+  /**
+   * Обработчик изменения размера окна
+   */
+  handleResize() {
+    clearTimeout(this.resizeTimeout);
+    this.resizeTimeout = setTimeout(() => {
+      this.switcherManager.init();
+    }, 250);
+  }
+
+  /**
+   * Инициализация приложения
+   */
+  init() {
+    this.switcherManager.init();
+    this.swiperReloader.init();
+    
+    // Обработчик изменения размера окна
+    window.addEventListener('resize', () => this.handleResize());
+  }
+}
+
+// Запуск приложения после загрузки DOM
+document.addEventListener('DOMContentLoaded', () => {
+  const app = new App();
+  app.init();
+});
+</script>

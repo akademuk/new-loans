@@ -4122,6 +4122,11 @@ details[open] .footer__warning-button::after {
     flex: 1 0 0;
 }
 
+.footer__bottom-list {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
 
 
@@ -4155,8 +4160,10 @@ details[open] .footer__warning-button::after {
 
 
 
-
-
+    .footer__bottom .footer__copyright{
+        width: 100%;
+        min-width: 100%;
+    }
 
 
 
@@ -4175,6 +4182,14 @@ details[open] .footer__warning-button::after {
 @media (min-width: 1280px) {
     .header__top .wrapper {
         max-width: 1540px;
+    }
+
+    .footer__bottom {
+        gap: 64px;
+    }
+
+    .footer__bottom .footer__copyright{
+        min-width: auto;
     }
 
     .header__top {
@@ -5952,4 +5967,12 @@ input[type="range"]:active {
 
 input[type="range"]:focus {
     border: none;
+}
+
+
+.home .hero__figure {
+    background: url(/wp-content/uploads/2025/10/background.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
