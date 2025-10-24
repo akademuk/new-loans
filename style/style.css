@@ -4128,8 +4128,37 @@ details[open] .footer__warning-button::after {
     gap: 6px;
 }
 
+.repayment-schedule-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
 
+.repayment-schedule-content-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    gap: 8px;
+}
 
+.repayment-schedule-content-text {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%; 
+}
+
+.repayment-schedule-content-value {
+    color: #212121;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%; 
+    flex-shrink: 0;
+}
 
 
 
@@ -5726,6 +5755,8 @@ details[open] .footer__warning-button::after {
     padding: 8px;
     border-radius: 8px;
     max-width: 400px;
+    height: 100%;
+    max-height: 492px;
     width: 100%;
     transform: translateY(-20px);
     opacity: 0;
@@ -5738,6 +5769,11 @@ details[open] .footer__warning-button::after {
         max-width: 560px;
         padding: 16px;
         border-radius: 24px;
+        max-height: 599px;
+    }
+
+    .repayment-schedule-scroll {
+        height: 330px;
     }
 }
 
@@ -5748,7 +5784,7 @@ details[open] .footer__warning-button::after {
     padding: 6px;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 50%;
     background: #fff;
     position: absolute;
     border: none;
@@ -5786,7 +5822,6 @@ details[open] .footer__warning-button::after {
     align-items: flex-start;
     gap: 24px;
     align-self: stretch;
-    max-height: 325px;
     height: 100%;
     overflow: hidden;
 }
@@ -5794,7 +5829,7 @@ details[open] .footer__warning-button::after {
 @media (min-width: 1024px) {
     .popup-menu__content {
         padding: 24px;
-        max-height: 427px;
+        max-height: 100%;
         border-radius: 20px;
     }
 }
