@@ -4591,6 +4591,10 @@ details[open] .footer__warning-button::after {
         padding: 48px 52px;
     }
 
+    .loan-application .credit-box__content {
+        position: static;
+    }
+
     .loan-application .wrapper {
         padding: 64px 12px 69px;
     }
